@@ -1,9 +1,9 @@
 ### TradeHub
 
-open this project on netbeans and follow this ### important steps
+open this project on Netbeans17 and follow these steps
 1. Resolve project files
-2. Add server if it isn't
-3. Clean and bulid the project
+2. Add a server if it isn't
+3. Clean and build the project
 4. Run the project
 
 ### Technologies used:-
