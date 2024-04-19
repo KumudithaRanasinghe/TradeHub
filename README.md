@@ -1,6 +1,6 @@
 ### TradeHub
 
-open this project on netbeans and follow this ##important steps
+open this project on netbeans and follow this ### important steps
 1. Resolve project files
 2. Add server if it isn't
 3. Clean and bulid the project
