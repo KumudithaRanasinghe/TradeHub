@@ -1,14 +1,7 @@
 # Compiled class file
 **/*.class
 
-# Log file
-**/logs/*
 
-# BlueJ files
-**/*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
 # Package Files #
 **/*.jar
@@ -37,9 +30,6 @@ nb-configuration.xml
 **/tomcat/logs/
 
 # Ignore IDE specific files
-.idea/
-*.iml
-*.iws
 
 # Ignore Mac OS X specific files
 .DS_Store
