@@ -13,9 +13,12 @@
         <%@include file="components/common.jsp" %>
     </head>
     <body>
+        <div class="main-wrapper">
         <center>
             <h1>Hello Putha !!!</h1>
             <img src="images/test/test.jpg" alt="test"/>
+            <button type="button" class="btn btn-primary">Primary</button>
         </center>
+        </div>
     </body>
 </html>

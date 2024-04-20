@@ -6,6 +6,58 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : Apr 20, 2024, 4:20:32 AM
     Author     : Shadow
 */
-body{
-    background: #00A991;   
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-color: #00A991;
+  --primary-color-active: #008774;
+  --primary-color-dark: #007F6D;
+  --secondary-color: #B0E4DD;
+  --text-primary-color: #009883;
+  --text-secondary-color: #000000;
+  --bg-light-color: #E6F6F4;
+  --text-light-color: #FAFAFA;
+  --text-light-shade: #e0e0e0;
+  --shadow-dark: rgba(0, 0, 0, 0.1);
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Poppins, sans-serif;
+}
+
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 60px);
+  justify-content: space-between;
+  overflow-x: hidden;
+  margin-top: 3.7rem;
+  background: white;
+}
+
+.btn-primary {
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  color: var(--text-light-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-active);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
