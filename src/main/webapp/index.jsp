@@ -15,7 +15,7 @@
     <body>
         <center>
             <h1>Hello Putha !!!</h1>
-            <img src="images/test.jpg" alt="test"/>
+            <img src="images/test/test.jpg" alt="test"/>
         </center>
     </body>
 </html>
