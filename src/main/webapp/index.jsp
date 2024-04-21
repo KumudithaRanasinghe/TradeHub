@@ -4,6 +4,7 @@
     Author     : Shadow
 --%>
 
+<%@page import="com.ecommerce.tradehub.helper.FactoryProvider"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,6 +17,11 @@
         <div class="main-wrapper">
         <center>
             <h1>Hello Putha !!!</h1>
+              <%
+                    out.println(FactoryProvider.getFactory());
+                
+              %>
+              <br>
             <img src="images/test/test.jpg" alt="test"/>
             <button type="button" class="btn btn-primary">Primary</button>
         </center>
