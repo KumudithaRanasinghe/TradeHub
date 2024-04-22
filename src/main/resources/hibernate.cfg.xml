@@ -18,6 +18,8 @@
     <property name="hbm2ddl.auto">update</property>
     <property name="show_sql">true</property>
     <!-- mapping class="com.mcnz.jpa.examples.Player" / -->
-    
+    <mapping class="com.ecommerce.tradehub.entities.User"></mapping>
+    <mapping class="com.ecommerce.tradehub.entities.Category"></mapping>
+    <mapping class="com.ecommerce.tradehub.entities.Product"></mapping>
   </session-factory>
 </hibernate-configuration>
