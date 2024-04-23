@@ -1,0 +1,113 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 22, 2024, 11:21:42 PM
+    Author     : MC DODANGODA
+*/
+
+
+.image-container img{
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+.login-box {
+  position: absolute;
+  top: 55%;
+  left: 70%;
+  width: 450px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-sizing: border-box;
+}
+.login-box .user-box {
+  position: relative;
+}
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #00A991;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #000;
+  pointer-events: none;
+  transition:  0.5s;
+}
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #000;
+  font-size: 12px;
+}
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+.btn-primary {
+    padding: 10px 5px;
+    border-radius: 4px;
+    width: 371px;
+    height: 56px;
+    background: #00A991;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+.btn-primary:active {
+    box-shadow: none;
+    transform: scale(0.98);
+}
+.buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 10px;
+}
+.sign-up-label {
+    margin: 0;
+    font-size: 16px;
+}
+.sign-up-link {
+    margin-left: 4px;
+    font-size: 16px;
+    text-decoration-color: #00A991;
+    color: #00A991;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+
+
+
