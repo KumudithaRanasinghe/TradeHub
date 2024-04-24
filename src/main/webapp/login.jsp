@@ -37,11 +37,13 @@
                                     <input type="password" name="pwrd" required="">
                                     <label>Password</label>
                                 </div>
-                                    <span class="sign-up-link"> Forget Password?</span>
+                                <div class="remember-forget">
+                                    <label> <input type="checkbox">Remember Me <a href="#">Forget Password?</a></label>
+                                </div>
                                 <div class="buttons-container">
                                     <button class="btn-primary">Login</button>
                                     <p class="sign-up-label">
-                                    Don't have an account? <span class="sign-up-link">Register</span>
+                                    Don't have an account? <a href="Registration.jsp" class="register-link">Register</a>
                                     </p>
                                 </div>
                             </div>
@@ -52,4 +54,5 @@
         </div>
         </div>
   </body>
-</html>
+</html>    
+                                
