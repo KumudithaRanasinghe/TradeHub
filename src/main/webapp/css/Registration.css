@@ -15,7 +15,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
      grid-gap: 7rem;
     padding: 0 2rem;
    }
-   .container .img {
+   .container .img img{
     width: 500px;
     padding-top: 200px;
     align-items: center;
