@@ -14,6 +14,7 @@
         <link rel="stylesheet" type="text/css" href="css/login.css">
     </head>
     <body>
+        <%@include file="components/nav.jsp" %>
         <div class="main-wrapper">
         <div class="container">
             <!-- Content here -->
@@ -53,6 +54,7 @@
             </div>
         </div>
         </div>
+        <%@include file="components/footer.jsp" %>
   </body>
 </html>    
                                 

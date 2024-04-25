@@ -71,20 +71,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   position: absolute;
   display: block;
 }
-.btn-primary {
-   padding: 10px 5px;
-   border-radius: 4px;
-   width: 371px;
-   height: 56px;
-   background: #00A991;
-   color: #fff;
-   cursor: pointer;
-   border: none;
-}
-.btn-primary:active {
-   box-shadow: none;
-   transform: scale(0.98);
-}
 .buttons-container {
    width: 100%;
    display: flex;

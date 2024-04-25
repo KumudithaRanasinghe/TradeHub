@@ -14,6 +14,7 @@
         <link rel="stylesheet" type="text/css" href="css/Registration.css">
     </head>
     <body>
+        <%@include file="components/nav.jsp" %>
         <div class="main-wrapper">
         <div class="container">
         <div class="img">
@@ -24,8 +25,8 @@
                 <h1>Create an account</h1>
                 <div class="btn-container">
                     <label class="switch btn-color-mode-switch">
-                        <input value="individual" name="color_mode" type="radio" id="individual">
-                        <input value="business" name="color_mode" type="radio" id="business" checked>
+                        <input value="false" name="color_mode" type="radio" id="individual">
+                        <input value="true" name="color_mode" type="radio" id="business" checked>
                         <label class="btn-color-mode-switch-inner" data-off="Personal" data-on="Business" for="color_mode"></label>
                     </label>
                 </div>
@@ -75,31 +76,37 @@
                         <label>Business Name</label>
                     </div>
                     <div class="inputForm mb-3">
-                        <input type="text" placeholder="Enter your Business Name" class="input" name="bname" required>
+                        <input type="text" placeholder="Enter your Business Name" class="input" name="fname" required>
                     </div>
                     <div class="flex-column">
                         <label>Business Type</label>
                     </div>
                     <div class="inputForm mb-3">
-                        <input type="text" placeholder="Enter Your Business Type" class="input" name="btype"required>
+                        <input type="text" placeholder="Enter Your Business Type" class="input" name="lname"required>
                     </div>
                     <div class="flex-column">
                         <label>Business Address</label>
                     </div>
                     <div class="inputForm mb-3">
-                        <input type="text" placeholder="Enter your Business Address" class="input" name="baddress" required>
+                        <input type="text" placeholder="Enter your Business Address" class="input" name="address" required>
                     </div>
                     <div class="flex-column">
                         <label>Business Phone Number</label>
                     </div>
                     <div class="inputForm mb-3">
-                        <input type="text" placeholder="Enter your Business Phone Number" class="input" name="bpnumber" required>
+                        <input type="text" placeholder="Enter your Business Phone Number" class="input" name="pnumber" required>
                     </div>
                     <div class="flex-column">
                         <label>Business Email</label>
                     </div>
                     <div class="inputForm mb-3">
-                        <input type="text" placeholder="Enter your Business Email" class="input" name="bemail" required>
+                        <input type="text" placeholder="Enter your Business Email" class="input" name="email" required>
+                    </div>
+                    <div class="flex-column">
+                        <label>Password</label>
+                    </div>
+                    <div class="inputForm mb-3">
+                        <input type="password" placeholder="Enter Your Password" class="input" name="pwrd" required>
                     </div>
                 </div>
                 <div class="flex-row">
@@ -146,5 +153,6 @@
         </div>
     </div>
     </div>
+    <%@include file="components/footer.jsp" %>
 </body>
 </html>
