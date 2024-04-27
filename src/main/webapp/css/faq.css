@@ -1,0 +1,97 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 26, 2024, 11:39:35 AM
+    Author     : HP
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.accordion .fa-plus{
+    color: #00a991;
+}
+.accordion{
+   display: flex;
+   align-items: center;
+}
+
+.accordion .image-box{
+   height: 400px;
+   width: 500px;
+   position: relative;
+   overflow: hidden;
+}
+.accordion .image-box img{
+   height: auto;
+   width: 100%;
+   display: block;
+}
+.content{
+   float: 1S;
+}
+
+.wrapper {
+   max-width: 60%;
+   margin: auto;
+}
+
+.wrapper > p,
+.wrapper > h1 {
+    margin: 1.5rem 0;
+    text-align: center;
+ }
+
+ .wrapper > h1 {
+    letter-spacing: 3px;
+ }
+
+ .accordion {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+ }
+
+ .accordion i{
+    font-size: 1.6rem;
+ }
+
+ .active, 
+ .accordion:hover {
+   background-color:f#fff;
+ }
+ .panel {
+    background-color: #fff;
+    overflow: hidden;
+    display: none;
+    padding: 0 2rem 2.5rem 2rem;
+ }
+
+ .panel p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.4;
+ }
+
+ .faq {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+ }
+ .faq.active {
+    border: none;
+ }
