@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -49,7 +50,7 @@ public class RegisterServlet extends HttpServlet {
                     out.println("Name is blank");
                     return;
                 }
-                // User object to store data
+                
                 User user = new User(userName, userEmail, userPassword, userPhone, "default.jpg", userAddress, userType, false);
 
                 
@@ -59,11 +60,11 @@ public class RegisterServlet extends HttpServlet {
                 tx.commit();
                 hibernateSession.close();
 
-                // Session management
-//                HttpSession httpsession = request.getSession();
-//                httpsession.setAttribute("message", "Registration Successful!!! User ID is: " + userId);
-//                response.sendRedirect("Registration.jsp");
-//                return;
+                
+                HttpSession httpsession = request.getSession();
+                httpsession.setAttribute("message", "Registration Successful!!! User ID is: " + userId);
+                response.sendRedirect("register.jsp");
+                return;
             } catch(Exception e) {
                 
                 out.println("An error occurred during registration: " + e.getMessage());

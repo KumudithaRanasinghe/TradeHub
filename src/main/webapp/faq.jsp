@@ -15,6 +15,7 @@
 
     </head>
     <body>
+        <%@include file="components/nav.jsp" %>
         <div class="main-wrapper">
         <div class="accordion">
         <div class="image-box">
@@ -94,7 +95,12 @@
             </div>
         </div>
     </div>
-     <script>
+  </div>
+</div>
+    <%@include file="components/footer.jsp" %>
+    </body>
+</html>
+<script>
         var acc = document.getElementsByClassName("accordion");
         var i;
 
@@ -109,9 +115,6 @@
                 } else {
                     panel.style.display = "block";
                 }
-            })
+            });
         }
-    </script>
-        </div>
-    </body>
-</html>
+ </script>

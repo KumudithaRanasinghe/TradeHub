@@ -20,10 +20,14 @@
                 <div class="img">
                     <img src="images/Registration/Regi.svg">
                 </div>
+                
                 <div id="individualFields" style="display: block; ">
+                    
                     <div class="form-box">
+                        <%@include file="components/message.jsp" %>
                         <form  action="RegisterServlet" method="post" class="form">
                             <h1>Create an account</h1>
+                           
                             <div class="btn-container">
                                 <label class="switch btn-color-mode-switch">
                                 <input  name="user_type" type="checkbox" role="switch"  id="user_type">
@@ -94,6 +98,7 @@
                     <div class="form-box">
                         <form action="RegisterServlet" method="post" class="form" >
                             <h1>Create an account</h1>
+                         
                             <div class="btn-container">
                                 <label class="switch btn-color-mode-switch">
                                 <input  name="user_type" type="checkbox" role="switch" value="true" id="user_type" checked>

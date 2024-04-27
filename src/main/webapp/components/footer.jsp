@@ -22,11 +22,11 @@
                         <ul>
                         <h3>Accounts</h3>
                         
-                            <li><a href="#"><h4>My account<h4></a></li>
-                            <li><a href="#"><h4>Login/Register</h4></a></li>
-                            <li><a href="#"><h4>Cart</h4></a></li>
+                            <li><a href="account.jsp"><h4>My account</h4></a></li>
+                            <li><a href="login.jsp"><h4>Login</h4></a></li>
+                            <li><a href="register.jsp"><h4>Register</h4></a></li>
                             <li><a href="#"><h4>Wishlist</h4></a></li>
-                            <li><a href="#"><h4>Shop<h4></a></li>
+                            <li><a href="#"><h4>Cart</h4></a></li>
                         </ul>
                     </div>
                         <div class="footer-col">
@@ -35,8 +35,8 @@
                             
                                <li><a href="#"><h4> Policy</h4></a></li>
                                <li><a href="#"><h4> Terms of use</h4></a></li>
-                               <li><a href="#"><h4> FAQ</h4></a></li>
-                               <li><a href="#"><h4> Contact</h4></a></li>
+                               <li><a href="faq.jsp"><h4> FAQ</h4></a></li>
+                               <li><a href="contact.jsp"><h4> Contact</h4></a></li>
                             </ul>
                         </div>
                         <div class="footer-col">
@@ -48,16 +48,19 @@
                                 <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
                             </ul>                        
-                        </div>    
-                </div>
+                        </div> 
+                        <div class="text-center">
+
+                        <p >&copy;Copyright. unknown. All right received.</p>
+
+                     </div>
                 </div>
                 
-            </div>
-            <div class="text-center">
-                            
-                <p >&copy;Copyright. unknown. All right received.</p>
+                </div>
+            
                 
             </div>
+            
             
         </footer>
             

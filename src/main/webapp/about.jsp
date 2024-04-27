@@ -15,8 +15,8 @@
     </head>
     <body>
         
-       <!-----------------------about---------------------------------->
-        <%@include file="components/nav.jsp" %>
+<!--       ---------------------about---------------------------------->
+<%@include file="components/nav.jsp" %>
 <div class="main-wrapper">
 <div id="about">
     <div class="container">
