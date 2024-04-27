@@ -49,7 +49,7 @@
                                 <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
                             </ul>                        
                         </div> 
-                        <div class="text-center">
+                        <div class="footer-bottom text-center">
 
                         <p >&copy;Copyright. unknown. All right received.</p>
 
