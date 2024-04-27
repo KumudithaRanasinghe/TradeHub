@@ -72,41 +72,41 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   display: block;
 }
 .buttons-container {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   margin-top: 20px;
-   gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
+  gap: 10px;
 }
 .sign-up-label {
-   margin: 0;
-   font-size: 16px;
+  margin: 0;
+  font-size: 16px;
 }
 .register-link{
-   margin-left: 4px;
-   font-size: 16px;
-   color: #00A991;
-   text-decoration: none;
-   cursor: pointer;
-   font-weight: 500;
+  margin-left: 4px;
+  font-size: 16px;
+  color: #00A991;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
 }
 .register-link:hover{
-   text-decoration: none;
-   color: #00A991;
+  text-decoration: none;
+  color: #00A991;
 }
 .remember-forget label input{
-   margin-right: 3px;
+  margin-right: 3px;
 }
 .remember-forget a{
-   color: #00A991;
-   text-decoration: none;
-   font-weight: 500;
-   cursor: pointer;
-   padding-left: 85px;
+  color: #00A991;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding-left: 85px;
 }
 .remember-forget a:hover{
-   text-decoration: none;
+  text-decoration: none;
 }
 
 

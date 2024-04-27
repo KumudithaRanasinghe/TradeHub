@@ -1,49 +1,39 @@
 
 .form-container{
-    padding-top: 100px;
-    margin: 6%;
-    float:left;
-    
- 
- }
- .form-box{
-    width: 600px;
-    height: 800px;
-    position: absolute;
-    top: 50%;
-    left: 55%;
-    margin: 6% auto;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;  
+   padding-top: 100px;
+   margin: 6%;
+}
+.form-box{
+   width: 600px;
+   height: 800px;
+   position: absolute;
+   top: 50%;
+   left: 55%;
+   margin: 6% auto;
+   padding: 40px;
+   transform: translate(-50%, -50%);
+   box-sizing: border-box;  
  }
  a{
    color: #555555;
    text-decoration:  none;
  }
  h1{
-    font-size: 30px;
-    color:#00a991;
+   font-size: 30px;
+   color:#00a991;
  }
  .form label{
-    font-weight: 600;
-    padding: 10px;
-    color: #000;
+   font-weight: 600;
+   padding: 10px;
+   color: #000;
  }
- .form-label  {
-    color: #000;
-    font-weight: 600;
-    padding-top:5px;
-  }
-  .button-container{
-    padding-top: 20px;
-    padding-left: 215px;
-  }
-  .btn-primary{
-    background-color: #00a991;
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    height: 45px;
-    width: 150px;
- }
+ .form-label{
+   color: #000;
+   font-weight: 600;
+   padding-top:5px;
+}
+.button-container{
+   padding-top: 20px;
+   padding-left: 215px;
+}
+  

@@ -9,20 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        
+        <title>about Page</title>
         <%@include file="components/common.jsp" %>
         <link rel="stylesheet" href="css/about.css"/>
-   
-  
-        
-               
     </head>
     <body>
-       
-          
-<!-----------------------about---------------------------------->
-
+        
+       <!-----------------------about---------------------------------->
+        <%@include file="components/nav.jsp" %>
+<div class="main-wrapper">
 <div id="about">
     <div class="container">
         <div class="row">           
@@ -38,7 +33,6 @@
     </div>
 </div>
 <!--------------------services------------------------------------->
-
 <div id="services">
     <div class="container">
         <div class="row">
@@ -304,12 +298,15 @@
         </div>
     </div>
 </div>
+</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- Bootstrap JavaScript CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+        <%@include file="components/footer.jsp" %>
+     
+    </body>
+</html>
 <script>
     var carouselIndicators = document.querySelector('.carousel-indicators');
     var carouselInner = document.querySelector('.carousel-inner');
@@ -326,7 +323,3 @@
         carouselIndicators.appendChild(indicator);
     }
 </script>
-
-        
-    </body>
-</html>
