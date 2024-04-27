@@ -7,54 +7,49 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : MC DODANGODA
 */
 
-   .container{
+.container {
     width: 100vw;
-    height: 10vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-     grid-gap: 7rem;
-    padding: 0 2rem;
-   }
-   .container .img img{
-    width: 500px;
-    padding-top: 200px;
-    align-items: center;
-    position: relative;
-   }
-   .container .img{
+    min-height: 5vh;
     display: flex;
-    justify-content: flex-end;
+    grid-gap: 7rem;
+}
+.container .img {
+    width: 500px;
+    padding-top: 60px;
+    position: relative;
+    display: flex;
     align-items: center;
-   }
-   .form-box{
-    width: 600px;
-    height: 900px;
-    position: absolute;
-    top: 55%;
-    left: 65%;
+    justify-items: center;
+}
+.form-box {
+    max-width: 600px;
+    max-height: 900px;
+    position: relative;
+    top: 45%;
+    left: 50%;
     margin: 6% auto;
-    padding: 40px;
+    padding: 10px;
     transform: translate(-50%, -50%);
-    background: #fff;
     box-sizing: border-box;  
-  }
-  .button-box{
+}
+.button-box {
     width: 220px;
     margin: 35px auto;
     position: relative;
     border-radius: 30px;
-  }
-  .btn-container {
+}
+.btn-container {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-  } 
-  .btn-color-mode-switch {
+} 
+.btn-color-mode-switch {
     display: inline-block;
     margin: 0px;
     position: relative;
-  }
-  .btn-color-mode-switch > label.btn-color-mode-switch-inner {
+}
+.btn-color-mode-switch > label.btn-color-mode-switch-inner {
+    cursor: pointer;
     margin: 0px;
     width: 450px;
     height: 40px;
@@ -64,8 +59,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     position: relative;
     transition: .5s;
     display: block;
-  }
-  .btn-color-mode-switch > label.btn-color-mode-switch-inner:before {
+}
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before {
     content: attr(data-on);
     position: absolute;
     font-size: 18px;
@@ -73,8 +68,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     top: 7px;
     right: 20px;
     color: #000;
-  }
-  .btn-color-mode-switch > label.btn-color-mode-switch-inner:after {
+}
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after {
     content: attr(data-off);
     width: 280px;
     height: 40px;
@@ -92,8 +87,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     padding: 5px 0px;
     color: #000;
     font-weight: 600;
-  }
-  .btn-color-mode-switch input[type="radio"] {
+}
+.btn-color-mode-switch input[type="checkbox"] {
     cursor: pointer;
     width: 50px;
     height: 25px;
@@ -102,82 +97,81 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     top: 0;
     z-index: 1;
     margin: 0px;
-  }
-  .btn-color-mode-switch input[type="radio"]:checked + label.btn-color-mode-switch-inner:after {
+}
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after {
     content: attr(data-on);
     left: 180px;
-  }
-  .btn-color-mode-switch input[type="radio"]:checked + label.btn-color-mode-switch-inner:before {
+}
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before {
     content: attr(data-off);
     right: auto;
     left: 20px;
-  }
-  .form {
+}
+.form {
     display: flex;
     flex-direction: column;
     padding: 30px;
     width: 500px;
-    border-radius: 30px;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  .form button {
+    border-radius: 30px;  
+}
+.form button {
     align-self: flex-end;
-  }
-  .inputForm {
+}
+.form-box .inputForm {
     border: 1.5px solid;
     border-radius: 10px;
     height: 40px;
     display: flex;
     align-items: center;
     transition: 0.2s ease-in-out;
-  }
-  .input {
+}
+.form-box .input {
     margin-left: 0px;
     border-radius: 10px;
     border: none;
     padding-left: 10px;
     width: 100%;
     height: 100%;
-  }
-  .input:focus {
+}
+.form-box .input:focus {
     outline: none;
-  }
-  .inputForm:focus-within {
+}
+.form-box .inputForm:focus-within {
     border: 3px solid #00a991;
-  }
-  .flex-row {
+}
+.flex-row {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
     justify-content: space-between;
-  }
-  .flex-row a{
+}
+.flex-row a {
     color:#00a991;
     text-decoration: none;
     font-weight: 500;
-  }
-  .flex-column > label {
+}
+.flex-column > label{
     color: #000;
     font-weight: 600;
-  }
-  .p {
+}
+.p{
     text-align: center;
     font-size: 14px;
-  }
-  
-  .google-login-button {
-    border-radius: 30px;
+}
+.google-login-button {
+    border-radius: 8px;
     box-sizing: border-box;
-    padding: 10px 15px;
+    padding: 10px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
-    height: 50px;
+    height: 40px;
     width: 100%;
     border: 2px solid #9f9f9f;
     gap: 5px;
-  }
+}
+  
+  
