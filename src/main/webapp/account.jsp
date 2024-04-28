@@ -42,7 +42,7 @@
                 <dt>Manage My account</dt>
                     <dd><a href="#">My Profile</a></dd>
                     <dd><a href="#">Address Book</a></dd>
-                    <dd><a href="#" data-bs-toggle="modal" data-bs-target="#add-product-modal">My Payment Options</a></dd>
+                    <dd><a href="#" data-bs-toggle="modal" data-bs-target="#add-product-modal">My Categories</a></dd>
                 <dt>My Orders</dt>
                     <dd><a href="#">My Returns</a></dd>
                     <dd><a href="#">My Cancellation</a></dd>
@@ -102,21 +102,21 @@
                       <form action="ProductServlet" method="post" enctype="multipart/form-data">
                           
                           <input type="hidden" name="operation" value="addproduct"/>
-                          <div class="form-group">
+                          <div class="form-group p-2">
                               <input type="text" class="form-control" placeholder="Enter title" name="pName" required/>
                               
                           </div>
-                          <div class="form-group">
+                          <div class="form-group p-2">
                               <textarea class="form-control" placeholder="Enter description" name="pDesc"></textarea>
                               
                           </div>
-                          <div class="form-group">
+                          <div class="form-group p-2">
                               <input type="number" class="form-control" placeholder="Enter price" name="pPrice" required/>
                               
                           </div>
                           
-                          <div class="form-group">
-                              <input type="number" class="form-control" placeholder="Enter qty" name="pQuantity" required/>
+                          <div class="form-group p-2">
+                              <input type="number" class="form-control" placeholder="Enter quantity" name="pQuantity" required/>
                               
                           </div>
                           
@@ -128,7 +128,7 @@
                           
                           
                           
-                          <div class="form-group">
+                          <div class="form-group p-2">
                               <select name="catId" class="form-control" >
                                   <% for(Category c:list){
                                   %>
@@ -139,7 +139,7 @@
                               </select>
                               
                           </div>
-                          <div class="form-group">
+                          <div class="form-group p-2">
                               <label for="pPic">Select picture</label>
                               <input type="file"  id="pPic" class="form-control"  name="pPic" required/>
                               
