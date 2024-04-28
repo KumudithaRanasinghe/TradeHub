@@ -1,0 +1,116 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 28, 2024, 11:19:34 PM
+    Author     : Nipun
+*/
+.table1{
+    margin-top: 120px;
+}
+.container .cart-box{
+    margin-bottom: 2rem;
+}
+
+.tr0{background:#D9F2EF;}
+
+.tr1{transform: translate(0%,40%);}
+
+.tr2{transform: translate(0%,70%);}
+
+td.pr{transform: translate(15%,0%);}
+
+.td{width:300px;}
+
+.box{
+    border:1px solid black ;
+    width:60px;
+    height:37px;
+    transform: translate(0%,0%);
+    }
+
+.p{transform: translate(15%,15%);}
+
+.chevron{
+    position: absolute;
+    height:5px;
+    width:5px;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    transform:rotate(45deg);
+    left:40px;
+    top:10px;
+}  
+
+.chevron1{
+    position: absolute;
+    height:5px;
+    width:5px;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    transform:rotate(-135deg);
+    left:40px;
+    top:20px;
+}  
+
+.b1{transform: translate(0%,250%);
+    width: 170px;
+    height:40px;
+    background-color: #B0E4DD;
+    border:none;       
+
+}
+.b2{transform: translate(585%,250%);
+    width: 150px;
+    height:40px;
+    background-color:#00A991;
+    color: white;
+    border:none; }
+
+
+.b3{transform: translate(-132%,550%);
+    width: 250px;
+    height:40px;
+    border: color 1px solid black;
+    background-color: white;
+    color:#abaaaa;}
+
+
+.b4{transform: translate(-210%,550%);
+    width: 150px;
+    height:40px;
+    background-color:#00A991;
+    color: white;
+    border:none;}
+
+.box1{
+     
+
+     transform: translate(138%);
+     width: 500px;
+     height:400px;
+     border: 1px solid black;
+     padding: 10px;
+     margin-left: 10px;
+     margin-top: 11.5rem;
+     
+      }
+
+.box2{
+    box-shadow: 0px 3px 0px 0px rgba(0,20,20,0.2);
+    transform: translate(5%,100%);
+    width:400px;
+    height: 50px;
+    
+}      
+
+.b5{
+    transform: translate(65%,150%);
+    width: 200px;
+    height: 50px;
+    background-color:#DB4444;
+    color: white;
+    border:none;
+}
+
