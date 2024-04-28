@@ -16,18 +16,27 @@
     <body>
         <%@include file="components/nav.jsp" %>
         <div class="main-wrapper">
+           
             <div class="container">
             <!-- Content here -->
-                <div class="row">
+                <div class="row ">
+                    
                     <div class="container-fluid">
                         <div class="col-md-8 image-container">
                             <img src="images/login/login.svg">
                         </div>
+                        
                     </div>
+                    
+                     
                     <div class="container-fluid">
+                        
+                       
                         <div class="col-md-6 form-container">
+                            
                             <form action="LoginServlet" method="post" class="form">
                                 <div class="login-box">
+                                    <%@include file="components/message.jsp" %>
                                     <h1>Log in to Exclusive</h1>
                                     <p><b>Enter your details below</b></p> 
                                     <div class="user-box">
