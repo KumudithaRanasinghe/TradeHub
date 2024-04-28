@@ -1,0 +1,147 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 28, 2024, 3:43:03 PM
+    Author     : DELL
+*/
+
+                      /*home css*/
+.side-menu{
+    font-size: 15px;
+    background-color:white;
+    padding: 100px;
+    height: 40%;
+    width:35%;
+    float: left;
+    z-index: 2;
+} 
+.side-menu ul{
+    margin-left: 10px;
+}  
+.side-menu ul p a{
+    color: black;
+    font-weight: 300;
+    margin-top: 5px;
+    text-decoration: none;
+    flex: 1;
+    cursor: pointer;
+} 
+.side-menu ul p a:hover{
+    color:#009883;
+}
+.fa-angle-right{
+    margin-top: 2px;
+    margin-right: 5px;
+    float: right;       
+}
+.slide{
+    width: 50%;
+    height: 10px 40%;
+    margin-left: 40%;
+    padding: 90px 40px;
+}
+.tittle-box h4{
+    border-left: 15px solid #00a991; 
+    padding: 5px;
+    font-size: 20px;
+    color: #00a991;
+    font-family: 'poppins', sans-serif;
+    margin: 20px;
+}
+.tittle-box h1{
+    font-size: 40px;
+    color:#000;
+    font-family: 'poppins', sans-serif;
+    margin: 10px;  
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    margin-bottom: 20px;
+    width: 15rem;
+}
+.card-footer .fa{
+    color: #007f6d;
+    padding: 7px;
+}
+.card-tittle .h5{
+    font-weight: 400;
+}
+.tittle-box-button{
+        background-color: #b0e4dd; 
+        border: none;
+        color: #004c41;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+}
+.tittle-box-button{
+    float:right;
+}
+.tittle-box-button:hover{
+    background-color: #009883;
+}
+ .fa-star,
+ .fa-star-half{
+    color:#f57c00;
+ } 
+
+ .catagerory-button{
+        background-color: #008774; 
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+}
+.catagerory-button:hover {
+    background-color:#006557;
+}
+.catagerory-button-a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}    
+.fa-circle-dot {
+    transition: transform 0.3s ease;
+}
+
+.icon-item {
+    background: #fff;
+    padding: 30px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.icon-item i {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.icon-item h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
