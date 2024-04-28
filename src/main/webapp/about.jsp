@@ -27,7 +27,7 @@
                 <p>At TradeHub, we believe in going above and beyond to ensure your satisfaction. That's why we're constantly innovating to provide you with the best possible experience. From seamless navigation on our user-friendly interface to secure payment options, every aspect of your journey with us is carefully crafted with your convenience in mind. Join the thousands of satisfied customers who trust us for their shopping needs. Experience the difference at TradeHub today!</p>  
             </div>
             <div class="col-lg-6 about-col-1">
-                <img src="images/work-2.png" class="img-fluid" alt="E-commerce">
+                <img src="images/about/work-2.png" class="img-fluid" alt="E-commerce">
             </div>
         </div>
     </div>
@@ -238,7 +238,7 @@
                         </div>  
                         <div>
                             <h3><p><b>Gihan Kalhara</b></p></h3>
-                            <p><a href="https://www.linkedin.com/in/rasil-laksika-kottagoda-749516255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i class="fa-brands fa-linkedin"></i></a>
+                            <p><a href="#"><i class="fa-brands fa-linkedin"></i></a>
                             <a href="https://www.facebook.com/share/UcWr349wVLQrkK5h/?mibextid=qi2Omg"><i class="fa-brands fa-square-facebook"></i></a>
                             <a href="https://github.com/Kalharakgp"><i class="fa-brands fa-github"></i></a></p>                          
                         </div>
@@ -263,7 +263,7 @@
         <span class="visually-hidden">Next</span>
     </button>
 
-    <div class="carousel-indicators">
+    <div class="carousel-indicators" class="Rasil-indicators">
         <!-- Indicators will be generated dynamically based on the number of items in carousel-inner -->
     </div>
 </div>
