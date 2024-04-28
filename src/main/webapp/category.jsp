@@ -19,117 +19,120 @@
        <div class=" category row">
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
-              <img src="images/category/" alt="Card image cap">
+              <img src="images/category/cat1.png" alt="Card image cap">
             </div>
             <div class="card-body" >
               <h5 class="card-title">Electronics</h5>
               <div class="card-text">
-                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum cupiditate
-                     
-                    
-                </p>
-              </div>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
+    <p>Explore the latest gadgets and tech innovations in our Electronics section.</p>
+</div>
+
+                <li>Smartphones & Tablets</li>
+                <li>Computers & Laptops</li>
+                <li>Gaming & Accessories</li>
+                <li>Gaming & Accessories</li>
             </div>
               <a href="" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
-              <img src="images/category/" alt="Card image cap">
+              <img src="images/category/cat2.jpeg" alt="Card image cap">
             </div>
             <div class="card-body" >
               <h5 class="card-title">Home & Lifestyle</h5>
               <div class="card-text">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum cupiditate
-                    </p>
-              </div>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
+    <p>Discover a world of comfort and style with our Home & Lifestyle products.</p>
+</div>
+
+                <li>Furniture & Decor</li>
+                <li>Kitchen & Dining</li>
+                <li>Bedding & Bath</li>
+                <li>Home Appliances</li>
             </div>
               <a href="" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
-              <img src="images/category/" alt="Card image cap">
+              <img src="images/category/cat3.png" alt="Card image cap">
             </div>
             <div class="card-body" >
               <h5 class="card-title">Medicine</h5>
               <div class="card-text">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum cupiditate</p>
-              </div>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
+    <p>Stay healthy and well-equipped with our Medicine category.</p>
+</div>
+
+                <li>Over-the-counter Medications</li>
+                <li>Prescription Drugs</li>
+                <li>Vitamins & Supplements</li>
+                <li>First Aid & Health Supplies</li>
             </div>
               <a href="jobs/marketing-jobs.php" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
-              <img src="images/category/" alt="Card image cap">
+              <img src="images/category/cat4.png" alt="Card image cap">
             </div>
             <div class="card-body" >
               <h5 class="card-title">Sports</h5>
               <div class="card-text">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum cupiditate</p>
-              </div>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
+    <p>Get active and pursue your passion for sports with our wide range of sporting goods.</p>
+</div>
+
+                <li>Fitness Equipment</li>
+                <li>Team Sports Gear</li>
+                <li>Outdoor Recreation</li>
+                <li>Athletic Apparel</li>
             </div>
               <a href="jobs/engineering-jobs.php" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
-              <img src="images/category/" alt="Card image cap">
+              <img src="images/category/cat5.png" alt="Card image cap">
             </div>
             <div class="card-body" >
               <h5 class="card-title">Toys</h5>
               <div class="card-text">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum cupiditate</p>
-              </div>
-               <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
+    <p>Ignite your child's imagination with our playful selection of Toys.</p>
+</div>
+
+               <li>Action Figures</li>
+                <li>Dolls & Accessories</li>
+                <li>Educational Toys</li>
+                <li>Educational Toys</li>
             </div>
               <a href="jobs/teaching-jobs.php" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
-              <img src="images/category/" alt="Card image cap">
+              <img src="images/category/cat6.png" alt="Card image cap">
             </div>
             <div class="card-body" >
               <h5 class="card-title">Helth & Beauty</h5>
               <div class="card-text">
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum cupiditate</p>
-              </div>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
+    <p>Indulge in self-care and pampering rituals with our Health & Beauty products.</p>
+</div>
+
+                <li>Skincare</li>
+                <li>Makeup</li>
+                <li>Haircare</li>
+                <li>Bath & Body</li>
             </div>
               <a href="jobs/medical-jobs.php" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
-              <img src="images/category/iss.png" alt="Card image cap">
+              <img src="images/category/cat7.jpeg" alt="Card image cap">
             </div>
             <div class="card-body" >
               <h5 class="card-title">Other</h5>
               <div class="card-text">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum cupiditate</p>
-              </div>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
+    <p>Discover unique and unexpected treasures in our Other category.</p>
+</div>
+
+                <li>Gifts & Novelty Items</li>
+                <li>Pet Supplies</li>
+                <li>Books & Stationery</li>
+                <li>Arts & Crafts</li>
             </div>
               <a href="jobs/other-jobs.php" class="text-center btn-primary">Explore Products</a> 
           </div>  
