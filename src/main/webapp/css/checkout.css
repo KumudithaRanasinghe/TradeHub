@@ -1,0 +1,49 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 30, 2024, 12:53:19 AM
+    Author     : DELL
+*/
+#myContainer{
+    top:16%;
+    width: 700px; 
+    margin: 0 auto; 
+    padding: 50px; 
+    position: absolute;
+    margin-left: 100px;
+    left: 0;
+    height:400px 
+}
+
+#shpContainer {
+    width: 400px; 
+    height: 550px; 
+    position: absolute;
+    top: 14%;
+    right: 140px;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+h5.nameh5{
+    margin-bottom: 10px;
+}
+.form-check1,
+.form-check2{
+    margin-top: 10px;
+}
+.form-label1{
+    margin-top: 15px;
+}
+.form-label-2{
+    margin-top: 10px;
+}
+.custom-btn-my{
+    margin-top: 20px;
+}
+.custom-btn,
+.custom-btn2{
+    margin-bottom: 30px;
+    padding-right: 20px;   
+}
