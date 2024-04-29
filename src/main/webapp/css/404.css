@@ -1,0 +1,40 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 29, 2024, 10:30:37 PM
+    Author     : MC DODANGODA
+*/
+
+#container{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container .content{
+  text-align: center;     
+}
+#container .content h1{
+  width: 829px;
+  height: 115px;
+  font-size: 70px;
+}
+#container .content h3{
+  font-size: 16px;
+  weight: 400;
+}
+.btn-container {
+  width: 50%;
+  margin: 45px auto;
+  padding: 350px 10px;
+  text-align: center;
+  coursor: pointer;
+  display: block;
+  border-radius: 8px;
+}
