@@ -5,9 +5,12 @@
 package com.ecommerce.tradehub.dao;
 
 import com.ecommerce.tradehub.entities.User;
+import com.ecommerce.tradehub.helper.FactoryProvider;
+import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -41,5 +44,19 @@ public class UserDao {
     }
     return user;  
     }
+    
+    public List<User> getUsers() {
+    try (Session session = this.factory.openSession()) {
+        Query query = session.createQuery("from User");
+        List<User> Users = query.list();
+        return Users;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return null;
+    }
+}
+    
+
+
     
 }

@@ -4,6 +4,7 @@
  */
 package com.ecommerce.tradehub.servlets;
 
+import com.ecommerce.tradehub.dao.UserDao;
 import com.ecommerce.tradehub.entities.User;
 import com.ecommerce.tradehub.helper.FactoryProvider;
 import java.io.IOException;
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -20,7 +23,7 @@ import org.hibernate.Transaction;
  *
  * @author Shadow
  */
-public class RegisterServlet extends HttpServlet {
+public class RemoveUserServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,39 +39,31 @@ public class RegisterServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+
+            int userId = Integer.parseInt(request.getParameter("UserId"));
             try {
-                String userName = request.getParameter("user_name");
-//                String userLname = request.getParameter("lname");
-                String userEmail = request.getParameter("user_email");
-                String userPassword = request.getParameter("user_password");
-                String userPhone = request.getParameter("user_phone");
-                String userAddress = request.getParameter("user_address");
-                Boolean userType = request.getParameter("user_type") != null;
+                try (Session hibernateSession = FactoryProvider.getFactory().openSession()) {
+                    Transaction tx = hibernateSession.beginTransaction();
+                    Query q2 = hibernateSession.createQuery("delete from User where id = :id");
+                    q2.setParameter("id", userId);
+                    int result = q2.executeUpdate(); // This line executes the delete operation
+                    if (result > 0) {
+                        System.out.println("User was deleted");
+                    }
+                    tx.commit();
+                }
 
-                
-                
-                User user = new User(userName, userEmail, userPassword, userPhone, "default.jpg", userAddress, userType, false);
-
-                
-                Session hibernateSession = FactoryProvider.getFactory().openSession();
-                Transaction tx = hibernateSession.beginTransaction();
-                int userId = (int) hibernateSession.save(user);
-                tx.commit();
-                hibernateSession.close();
-
-                
                 HttpSession httpsession = request.getSession();
-                httpsession.setAttribute("message", "Registration Successful!!! User ID is: " + userId);
+                httpsession.setAttribute("message", "Deletion Successful!!! User ID is: " + userId);
                 response.sendRedirect("register.jsp");
                 return;
-            } catch(Exception e) {
-                
-                out.println("An error occurred during registration: " + e.getMessage());
-                e.printStackTrace();
-                return;
+
+            } catch(IOException | HibernateException e) {
+                out.println("An error occurred during deletion: " + e.getMessage());
             }
         }
     }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
