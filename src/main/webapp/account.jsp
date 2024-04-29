@@ -40,9 +40,8 @@
         <div class="col-md-6 form-container">
             <dl>
                 <dt>Manage My account</dt>
-                    <dd><a href="#">My Profile</a></dd>
-                    <dd><a href="#">Address Book</a></dd>
-                    <dd><a href="#" data-bs-toggle="modal" data-bs-target="#add-product-modal">My Categories</a></dd>
+                    <dd><a href="account.jsp">My Profile</a></dd>
+                    <dd><a href="#" data-bs-toggle="modal" data-bs-target="#add-product-modal">Add Products</a></dd>
                 <dt>My Orders</dt>
                     <dd><a href="#">My Returns</a></dd>
                     <dd><a href="#">My Cancellation</a></dd>

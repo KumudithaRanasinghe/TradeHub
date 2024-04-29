@@ -25,8 +25,8 @@
                             <li><a href="account.jsp"><h4>My account</h4></a></li>
                             <li><a href="login.jsp"><h4>Login</h4></a></li>
                             <li><a href="register.jsp"><h4>Register</h4></a></li>
-                            <li><a href="#"><h4>Wishlist</h4></a></li>
-                            <li><a href="#"><h4>Cart</h4></a></li>
+<!--                            <li><a href="#"><h4>Wishlist</h4></a></li>-->
+                            <li><a href="cart.jsp"><h4>Cart</h4></a></li>
                         </ul>
                     </div>
                         <div class="footer-col">
@@ -51,7 +51,7 @@
                         </div> 
                         <div class="footer-bottom text-center">
 
-                        <p >&copy;Copyright. unknown. All right received.</p>
+                        <p >&copy;Copyright. TradeHub | All right received.</p>
 
                      </div>
                 </div>

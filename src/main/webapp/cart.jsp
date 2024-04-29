@@ -4,6 +4,7 @@
     Author     : Nipun
 --%>
 
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -56,7 +57,7 @@
             </tr>
             </table>
 
-            <button class="b1 rounded"><b>Return To Shop</b></button>
+            <a href="index.jsp"><button class="b1 rounded"><b>Return To Shop</b></button></a>
             <button class="b2 rounded">Update Cart</button>
             <button class="b3 rounded">Coupon Code</button>
             <button class="b4 rounded">Apply coupon</button>

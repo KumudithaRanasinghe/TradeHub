@@ -31,7 +31,7 @@
          </ul> 
         
         <div class="nav-item" >
-          <i class="fa-solid fa-cart-shopping mx-lg-5"></i>
+            <a href="cart.jsp" style="color:#008774;"><i class="fa-solid fa-cart-shopping mx-lg-5"></i></a>
             <% 
                 if(user1==null){
                 
@@ -47,7 +47,7 @@
 
                 %>
                 <a href="account.jsp">
-                <button type="submit" class="btn btn-secondary mr-2"><%= user1.getUserName()%></button>
+                    <%= user1.getUserName()%>
             </a>
             <a  class="mx-1" href="LogoutServlet">
                 <button type="submit" class=" btn-primary">Log out</button>
