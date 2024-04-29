@@ -25,6 +25,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     right: 140px;
     padding: 20px;
     background-color: whitesmoke;
+    border-radius:20px;
 }
 h5.nameh5{
     margin-bottom: 10px;
