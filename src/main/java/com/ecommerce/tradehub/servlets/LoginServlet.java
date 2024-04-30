@@ -50,8 +50,9 @@ public class LoginServlet extends HttpServlet {
             else{
                 out.println( "<h1> Welcome "+user.getUserName()+" </h1>");
                 
-               
+              
                 httpSession.setAttribute("user_type",user);
+                
                 if(user.isUserType())
                 {
                     response.sendRedirect("account.jsp");

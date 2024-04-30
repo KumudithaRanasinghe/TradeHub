@@ -5,6 +5,10 @@
         <servlet-class>com.ecommerce.tradehub.servlets.RegisterServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>DeleteItemServlet</servlet-name>
+        <servlet-class>com.ecommerce.tradehub.servlets.DeleteItemServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.ecommerce.tradehub.servlets.LoginServlet</servlet-class>
     </servlet>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>DeleteItemServlet</servlet-name>
+        <url-pattern>/DeleteItemServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>

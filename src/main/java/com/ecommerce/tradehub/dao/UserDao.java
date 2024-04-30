@@ -17,46 +17,41 @@ import org.hibernate.Transaction;
  * @author Shadow
  */
 public class UserDao {
-    private final SessionFactory factory;  
+
+    private final SessionFactory factory;
 
     public UserDao(SessionFactory factory) {
         this.factory = factory;
     }
-    
-    
-    
-    public User getUserByEmailandPassword(String email, String password)
-    {
-       User user = null;
 
-    try {
-        String query = "from User where userEmail = :e and userPassword = :p";
-        try (Session session = this.factory.openSession()) {
-            Query q = session.createQuery(query);
-            q.setParameter("e", email);
-            q.setParameter("p", password);
+    public User getUserByEmailandPassword(String email, String password) {
+        User user = null;
 
-            user = (User) q.uniqueResult();
-            System.out.println("User fetched: " + user); 
+        try {
+            String query = "from User where userEmail = :e and userPassword = :p";
+            try (Session session = this.factory.openSession()) {
+                Query q = session.createQuery(query);
+                q.setParameter("e", email);
+                q.setParameter("p", password);
+
+                user = (User) q.uniqueResult();
+                System.out.println("User fetched: " + user);
+            }
+        } catch (Exception e) {
+            System.err.println("Error fetching user: " + e.getMessage());
         }
-    } catch (Exception e) {
-        System.err.println("Error fetching user: " + e.getMessage());
+        return user;
     }
-    return user;  
-    }
-    
+
     public List<User> getUsers() {
-    try (Session session = this.factory.openSession()) {
-        Query query = session.createQuery("from User");
-        List<User> Users = query.list();
-        return Users;
-    } catch (Exception e) {
-        e.printStackTrace();
-        return null;
+        try (Session session = this.factory.openSession()) {
+            Query query = session.createQuery("from User");
+            List<User> Users = query.list();
+            return Users;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
-}
-    
 
-
-    
 }
