@@ -60,6 +60,12 @@
                                 <input type="password" placeholder="Enter Your Password" class="input" name="user_password" required>
                             </div>
                             <div class="flex-column">
+                                <label>Confirm Password</label>
+                            </div>
+                            <div class="inputForm mb-3">
+                                <input type="password" placeholder="Enter Your Password" class="input" name="user_seepassword" required>
+                            </div>
+                            <div class="flex-column">
                                 <label>Phone Number</label>
                             </div>
                             <div class="inputForm mb-3">
@@ -143,6 +149,12 @@
                             <div class="inputForm mb-3">
                                 <input type="password" placeholder="Enter Your Password" class="input" name="user_password" required>
                             </div>
+                            <div class="flex-column">
+                                <label>Confirm Password</label>
+                            </div>
+                            <div class="inputForm mb-3">
+                                <input type="password" placeholder="Enter Your Password" class="input" name="user_seepassword" required>
+                            </div> 
                             <div class="flex-row">
                                 <input type="checkbox">
                                 <label>By selecting Create Personal account, you agree to our <a href="#">User Agreement</a> and acknowledge reading our <a href="#">User Privacy Notice.</a></label>
