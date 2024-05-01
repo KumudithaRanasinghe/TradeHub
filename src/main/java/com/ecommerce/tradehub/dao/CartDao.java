@@ -67,7 +67,7 @@ public class CartDao {
     }
 
     public int getItemCountById(int u_id) {
-          try (Session session = sessionFactory.openSession()) {
+        try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             Query query = session.createQuery("from Cart where u_id = :id");
             query.setParameter("id", u_id);
@@ -104,6 +104,95 @@ public class CartDao {
         } finally {
             session.close();
         }
+    }
+
+    public void addItem(int p_id, int u_id, int qt) {
+
+        Transaction tx = null;
+
+        try (Session session = sessionFactory.openSession()) {
+            tx = session.beginTransaction();
+            String sql = "INSERT INTO cart(p_id,u_id,cart_quantity) VALUES (:p_id, :u_id, :cart_quantity)";
+            session.createNativeQuery(sql)
+                    .setParameter("p_id", p_id)
+                    .setParameter("u_id", u_id)
+                    .setParameter("cart_quantity", qt)
+                    .executeUpdate();
+            tx.commit();
+            session.close();
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+        }
+
+//        response.sendRedirect("success.jsp");
+    }
+
+    public int isItemExists(int p_Id, int u_Id) {
+
+              try (Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            Query query = session.createQuery("from Cart where p_id = :p_id and u_id = :u_id");
+            query.setParameter("p_id", p_Id);
+            query.setParameter("u_id", u_Id);
+            List<Cart> items = query.list();
+
+            session.getTransaction().commit();
+            session.close();
+            return items.size();
+
+        } catch (Exception e) {
+            return -1;
+        }
+
+    }
+
+    public List<Cart> getItemIdAndQt(int p_id, int u_id) {
+
+        try (Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            Query query = session.createQuery("from Cart where u_id = :u_id and p_id= :p_id");
+            query.setParameter("u_id", u_id);
+            query.setParameter("p_id", p_id);
+            List<Cart> items = query.list();
+
+            session.getTransaction().commit();
+            session.close();
+            return items;
+
+        } catch (Exception e) {
+            return null;
+        }
+
+    }
+
+    public boolean updateCart(int cart_id, int qt) {
+        Transaction tx = null;
+
+        try (Session session = sessionFactory.openSession()) {
+            tx = session.beginTransaction();
+            String sql = "UPDATE cart SET cart_quantity = :cart_quantity WHERE cart_id = :cart_id";
+            int rowsUpdated = session.createNativeQuery(sql)
+                    .setParameter("cart_quantity", qt)
+                    .setParameter("cart_id", cart_id)
+                    .executeUpdate();
+            tx.commit();
+            session.close();
+            if (rowsUpdated > 0) {
+
+                return true;
+
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+
+        }
+        return false;
     }
 
 }

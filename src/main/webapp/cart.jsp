@@ -16,7 +16,9 @@
         response.sendRedirect("login.jsp");
     } else {
 
+
 %>
+
 
 <!DOCTYPE html>
 <html>
@@ -32,9 +34,31 @@
             int total = 0;
             int subtotal = 0;
             int itemPrice = 0;
-
             CartDao cartDao = new CartDao();
-            List<Cart> items = cartDao.getItemsById(logged_user.getUserId());
+
+            String product_id = request.getParameter("id");
+            if (product_id != null) {
+
+                if (cartDao.isItemExists(Integer.parseInt(product_id), logged_user.getUserId()) > 0) {
+
+                    List<Cart> outcomes = cartDao.getItemIdAndQt(Integer.parseInt(product_id), logged_user.getUserId());
+                    for (Cart outcome : outcomes) {
+                        cartDao.updateCart(outcome.getCartId(), outcome.getQuantity() + 1);
+                    }
+        %><script type="text/javascript">
+            window.location.href = "products.jsp";
+        </script><%
+    } else {
+
+        cartDao.addItem(Integer.parseInt(product_id), logged_user.getUserId(), 1);
+        %><script type="text/javascript">
+            window.location.href = "products.jsp";
+        </script><%
+            }
+        }
+
+        List<Cart> items = cartDao.getItemsById(logged_user.getUserId());
+
         %>
         <script>
 
@@ -87,7 +111,7 @@
                             <td>Subtotal</td>
                         </tr>
 
-                        <%  int dynamic = 0;
+                        <%                            int dynamic = 0;
 
                             for (Cart item : items) {
                                 dynamic++;
@@ -131,7 +155,7 @@
                             <div class="box2"><pre>Shipping:                Free</pre></div>
                             <div class="box2" id="tot"><pre>total:                   Rs.<%= total%>.00</pre></div>
                         </h5>
-                        <a href="checkout.jsp"><button class="b5 rounded">Procees To Checkout</button></a>
+                        <button class="b5 rounded">Procees To Checkout</button>
 
                     </div>
                     <br><br>
