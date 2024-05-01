@@ -1,6 +1,6 @@
 <%-- 
-    Document   : product
-    Created on : Apr 25, 2024, 7:52:34 PM
+    Document   : item
+    Created on : May 1, 2024, 9:15:53 PM
     Author     : Minul
 --%>
 
@@ -11,8 +11,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Havic HV G-92 Gamepad</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/item.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
  <table>
@@ -43,7 +43,7 @@
             <span class="rating-value"></span>
             <a href="#" class="rating-link">150 Reviews | INSTOCK </a> 
           </div>
-          <p class="price" >$192.00</p>
+          <p class="price" style="color:green" >$192.00</p>
           <div class="description">
             <p style="font-family: Times New Roman ;">PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p>
 <hr>
@@ -177,3 +177,5 @@
 </table>
 </body>
 </html>
+
+    
