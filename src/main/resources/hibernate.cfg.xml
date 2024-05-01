@@ -21,5 +21,6 @@
     <mapping class="com.ecommerce.tradehub.entities.User"></mapping>
     <mapping class="com.ecommerce.tradehub.entities.Category"></mapping>
     <mapping class="com.ecommerce.tradehub.entities.Product"></mapping>
+     <mapping class="com.ecommerce.tradehub.entities.Cart"></mapping>
   </session-factory>
 </hibernate-configuration>
