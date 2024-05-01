@@ -1,0 +1,176 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 26, 2024, 3:57:16 AM
+    Author     : USER
+*/
+
+
+/* Custom CSS for Bootstrap integration */
+.container {
+    padding: 10px;
+}
+
+#about {
+    padding: 20px 0;
+    color: #080808;
+}
+
+.about-col-1 img {
+    border-radius: 15px;
+    width: 120%;
+    height: 100%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #080808;
+}
+
+.about-col-2 p {
+    margin-bottom: 20px;
+}
+
+/*---------------------------services---------------------------------------------*/
+
+#services {
+    padding: 30px 0;
+}
+
+.service-item {
+    background: #fff;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    border: 2px solid black;
+}
+
+.service-item p{
+    font-size: 15px;
+   
+}
+
+.service-item i {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.service-item:hover {
+    background: #008774;
+    transform: translateY(-10px);
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .col-md-6 {
+        margin-bottom: 20px; /* Adjust the gap between columns */
+    }
+}
+
+/*-------------------------------------Developers-----------------------------*/
+
+.card-dev{
+    background-color: white;
+   /* rgba(255, 255, 255, 0.459);*/
+    width: 350px;
+    height: 470px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 30px;
+    
+    }
+
+    .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    }
+
+    .column-dev{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    }
+
+    .curve{
+    border-radius: 10px;
+    transition: 200ms;
+    }
+
+    .center{
+    display: flex;
+    justify-content: center;
+    }
+
+    .curve:hover{
+    scale: 103%;
+    }
+
+    .card-dev .column-dev a {
+        margin-right: 10px; 
+    }
+
+
+/* Hide the previous and next buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+/* Style the carousel indicators */
+.Rasil-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.Rasil-indicators button {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border: none;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Rasil-indicators button.active {
+    background-color: blue;
+}
+
+
+/*--------------------------------------icons------------------------------------*/
+
+.fa-circle-dot {
+    transition: transform 0.3s ease;
+}
+
+.icon-item {
+    background: #fff;
+    padding: 30px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.icon-item i {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.icon-item h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+
+

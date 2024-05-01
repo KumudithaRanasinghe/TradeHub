@@ -11,7 +11,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 :root {
   --primary-color: #00A991;
   --primary-color-active: #008774;
-  --primary-color-dark: #007F6D;
+  --primary-color-dark: #006557;
   --secondary-color: #B0E4DD;
   --text-primary-color: #009883;
   --text-secondary-color: #000000;
@@ -27,6 +27,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: Poppins, sans-serif;
+}
+a {
+  text-decoration: none;
 }
 
 .main-wrapper {
@@ -56,13 +59,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
 }
 
+
+
 .btn-primary:active {
   transform: scale(0.98);
 }
 
 
   .footer{
-    background-color: #066156;
+    background-color:var(--primary-color-dark) ;
     
   }
 
@@ -79,7 +84,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   .footer-col h3{
     font-size: 18px;
     font-family: Poppins, sans-serif;
-    color:#fdfcff;
+    color:var(--text-light-color);
     margin-bottom: 20px;
     font-weight: 500;
     position: relative;
@@ -88,7 +93,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     padding-right: 4px;
     font-size: 15px;
     font-family: Poppins, sans-serif;
-    color:#ffffff;
+    color:var(--text-light-shade);
     margin-bottom: 25px;
     font-weight: 400;
     position: relative; 
@@ -127,5 +132,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 .footer-col .social-links a:hover{
     
     background-color: black;
+}
+.footer-bottom{
+    color: var(--text-light-shade);
 }
 

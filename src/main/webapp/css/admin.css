@@ -1,0 +1,54 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 29, 2024, 7:31:02 PM
+    Author     : Shadow
+*/
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem auto;
+}
+.section-title{
+    margin-left: 42px;
+}
+
+.form {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.table{
+    
+    width: 1200px;
+    margin-left: 40px;
+}
+.table th{
+    background: #00A991;
+}
+
+.job-listing-dashboard,
+.admins-list {
+  width: 100%;
+ 
+}
+
+.table-striped th {
+  white-space: nowrap;
+}
+
+.dashboard-action-btns {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+

@@ -7,12 +7,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : MC DODANGODA
 */
 
-
 .image-container img{
-    width: 100%;
-    padding: 40px;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
 }
 .login-box {
   position: absolute;
@@ -72,42 +71,41 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   position: absolute;
   display: block;
 }
-.btn-primary {
-    padding: 10px 5px;
-    border-radius: 4px;
-    width: 371px;
-    height: 56px;
-    background: #00A991;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-}
-.btn-primary:active {
-    box-shadow: none;
-    transform: scale(0.98);
-}
 .buttons-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 20px;
-    gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
+  gap: 10px;
 }
 .sign-up-label {
-    margin: 0;
-    font-size: 16px;
+  margin: 0;
+  font-size: 16px;
 }
-.sign-up-link {
-    margin-left: 4px;
-    font-size: 16px;
-    text-decoration-color: #00A991;
-    color: #00A991;
-    cursor: pointer;
-    font-weight: 600;
+.register-link{
+  margin-left: 4px;
+  font-size: 16px;
+  color: #00A991;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
 }
-
-
-
-
+.register-link:hover{
+  text-decoration: none;
+  color: #00A991;
+}
+.remember-forget label input{
+  margin-right: 3px;
+}
+.remember-forget a{
+  color: #00A991;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding-left: 85px;
+}
+.remember-forget a:hover{
+  text-decoration: none;
+}
 
