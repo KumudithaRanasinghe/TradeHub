@@ -11,8 +11,9 @@
 
     if (user1 != null) {
         count = cart_dao.getItemCountById(user1.getUserId());
-
     }
+
+    
 
 %>
 

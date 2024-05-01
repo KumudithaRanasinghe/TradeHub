@@ -4,6 +4,10 @@
     Author     : Shadow
 --%>
 
+<%@page import="com.ecommerce.tradehub.entities.Category"%>
+<%@page import="java.util.List"%>
+<%@page import="com.ecommerce.tradehub.dao.CategoryDao"%>
+<%@page import="com.ecommerce.tradehub.helper.FactoryProvider"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,7 +19,13 @@
     </head>
     <body>
         <%@include file="components/nav.jsp" %>
-        <div class="main-wrapper">   
+        <div class="main-wrapper">  
+            <% 
+                 String cat = request.getParameter("category");
+                 CategoryDao cdao = new CategoryDao(FactoryProvider.getFactory());
+                 List<Category> clist = cdao.getCategories();
+
+            %>
        <div class=" category row">
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -24,15 +34,15 @@
             <div class="card-body" >
               <h5 class="card-title">Electronics</h5>
               <div class="card-text">
-    <p>Explore the latest gadgets and tech innovations in our Electronics section.</p>
-</div>
+            <p>Explore the latest gadgets and tech innovations in our Electronics section.</p>
+            </div>
 
                 <li>Smartphones & Tablets</li>
                 <li>Computers & Laptops</li>
                 <li>Gaming & Accessories</li>
                 <li>Gaming & Accessories</li>
             </div>
-              <a href="" class="text-center btn-primary">Explore Products</a> 
+              <a href="products.jsp?category=1" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -49,7 +59,7 @@
                 <li>Bedding & Bath</li>
                 <li>Home Appliances</li>
             </div>
-              <a href="" class="text-center btn-primary">Explore Products</a> 
+              <a href="products.jsp?category=4" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -66,7 +76,7 @@
                 <li>Vitamins & Supplements</li>
                 <li>First Aid & Health Supplies</li>
             </div>
-              <a href="jobs/marketing-jobs.php" class="text-center btn-primary">Explore Products</a> 
+              <a href="products.jsp?category=3" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -83,7 +93,7 @@
                 <li>Outdoor Recreation</li>
                 <li>Athletic Apparel</li>
             </div>
-              <a href="jobs/engineering-jobs.php" class="text-center btn-primary">Explore Products</a> 
+              <a href="products.jsp?category=5" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -100,7 +110,7 @@
                 <li>Educational Toys</li>
                 <li>Educational Toys</li>
             </div>
-              <a href="jobs/teaching-jobs.php" class="text-center btn-primary">Explore Products</a> 
+              <a href="products.jsp?category=2" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -117,7 +127,7 @@
                 <li>Haircare</li>
                 <li>Bath & Body</li>
             </div>
-              <a href="jobs/medical-jobs.php" class="text-center btn-primary">Explore Products</a> 
+              <a href="products.jsp?category=6" class="text-center btn-primary">Explore Products</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -134,7 +144,7 @@
                 <li>Books & Stationery</li>
                 <li>Arts & Crafts</li>
             </div>
-              <a href="jobs/other-jobs.php" class="text-center btn-primary">Explore Products</a> 
+              <a href="products.jsp?category=7" class="text-center btn-primary">Explore Products</a> 
           </div>  
         </div>
     </div>

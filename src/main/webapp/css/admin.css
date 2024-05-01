@@ -13,6 +13,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   width: 100%;
   margin: 2rem auto;
 }
+.section-title{
+    margin-left: 42px;
+}
 
 .form {
   display: block;

@@ -1,7 +1,7 @@
 <%-- 
-    Document   : contact
-    Created on : Apr 29, 2024, 12:47:19 PM
-    Author     : MC DODANGODA
+    Document   : contact new
+    Created on : May 1, 2024, 12:43:41 PM
+    Author     : Acer
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -66,3 +66,5 @@
         <%@include file="components/footer.jsp" %>
     </body>
 </html>
+
+  

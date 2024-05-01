@@ -87,7 +87,7 @@
                             <td>Subtotal</td>
                         </tr>
 
-                        <%                            int dynamic = 0;
+                        <%  int dynamic = 0;
 
                             for (Cart item : items) {
                                 dynamic++;
@@ -131,7 +131,7 @@
                             <div class="box2"><pre>Shipping:                Free</pre></div>
                             <div class="box2" id="tot"><pre>total:                   Rs.<%= total%>.00</pre></div>
                         </h5>
-                        <button class="b5 rounded">Procees To Checkout</button>
+                        <a href="checkout.jsp"><button class="b5 rounded">Procees To Checkout</button></a>
 
                     </div>
                     <br><br>

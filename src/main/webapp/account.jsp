@@ -17,7 +17,7 @@
         response.sendRedirect("login.jsp");
         return;
     } else if (!user.isUserType()) {
-        session.setAttribute("message", "You are not admin");
+        session.setAttribute("message", "You are not a business user");
         response.sendRedirect("login.jsp");
         return;
     }
