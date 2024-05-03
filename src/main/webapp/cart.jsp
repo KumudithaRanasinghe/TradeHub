@@ -37,6 +37,7 @@
             CartDao cartDao = new CartDao();
 
             String product_id = request.getParameter("id");
+            String isThereCat = request.getParameter("category");
             if (product_id != null) {
 
                 if (cartDao.isItemExists(Integer.parseInt(product_id), logged_user.getUserId()) > 0) {
@@ -45,19 +46,32 @@
                     for (Cart outcome : outcomes) {
                         cartDao.updateCart(outcome.getCartId(), outcome.getQuantity() + 1);
                     }
+                    if (isThereCat != null) {
         %><script type="text/javascript">
-            window.location.href = "products.jsp";
+                        window.location.href = "products.jsp?category=" + isThereCat;
         </script><%
-    } else {
-
-        cartDao.addItem(Integer.parseInt(product_id), logged_user.getUserId(), 1);
+        } else {
         %><script type="text/javascript">
-            window.location.href = "products.jsp";
+                window.location.href = "products.jsp";
         </script><%
             }
-        }
 
-        List<Cart> items = cartDao.getItemsById(logged_user.getUserId());
+        } else {
+
+            cartDao.addItem(Integer.parseInt(product_id), logged_user.getUserId(), 1);
+            if (isThereCat != null) {
+        %><script type="text/javascript">
+                        window.location.href = "products.jsp?category=" + isThereCat;
+        </script><%
+        } else {
+        %><script type="text/javascript">
+                window.location.href = "products.jsp";
+        </script><%
+                    }
+                }
+            }
+
+            List<Cart> items = cartDao.getItemsById(logged_user.getUserId());
 
         %>
         <script>
