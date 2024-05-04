@@ -50,7 +50,7 @@ public class ProductDao {
      public List<Product> getAllProducts()
      {
        Session s = this.factory.openSession();
-       Query query = s.createQuery("from Product");
+       Query query = s.createQuery("from Product order by rand()");
        List<Product> list = query.list();
        return list;
      }
