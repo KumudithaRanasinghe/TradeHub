@@ -8,24 +8,28 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 */
 
                       /*home css*/
-.side-menu{
+.header{
+    display: flex;                      
+ }                     
+.header .side-menu{
     font-size: 15px;
     background-color:white;
-    padding: 100px;
+    margin-left: 30px;
     height: 40%;
-    width:35%;
-    float: left;
-    z-index: 2;
+    display: flex;
+    flex: 0 0 300px;
+    
 } 
 .side-menu ul{
-    margin-left: 10px;
-}  
+    margin-top: 40px;
+}
+
+     
 .side-menu ul p a{
     color: black;
     font-weight: 300;
     margin-top: 5px;
     text-decoration: none;
-    flex: 1;
     cursor: pointer;
 } 
 .side-menu ul p a:hover{
@@ -33,36 +37,83 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 }
 .fa-angle-right{
     margin-top: 2px;
-    margin-right: 5px;
-    float: right;       
+    float: right; 
+    margin-left: 20px;
 }
-.slide{
-    width: 50%;
-    height: 10px 40%;
-    margin-left: 40%;
-    padding: 90px 40px;
+.carousel-wrapper {
+  display: flex; 
+  flex: 1;
+  margin-top:30px;
+  justify-content: flex-end;
+  
+  
 }
+#carouselExampleIndicators{
+    margin: auto;
+}
+
+.carousel-wrapper .carousel-inner{
+    width: 850px;
+    margin-left: 10px;
+}
+
+.carousel-inner .carousel-item img{
+    height: 300px;
+    border-radius: 8px;
+}
+
+.carousel-indicators{
+    list-style: none;
+    margin: 0;
+    padding: 3px;
+    bottom: 5px;
+}
+
+ .carousel-indicators .indicator-btn {
+  border:none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left:3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.carousel-indicators button.active {
+  background-color: #008774;
+ 
+}
+
 .tittle-box h4{
     border-left: 15px solid #00a991; 
     padding: 5px;
     font-size: 20px;
     color: #00a991;
-    font-family: 'poppins', sans-serif;
-    margin: 20px;
+    margin: 10px;
 }
 .tittle-box h1{
     font-size: 40px;
     color:#000;
-    font-family: 'poppins', sans-serif;
     margin: 10px;  
 }
-.row{
+.sales .row{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-left: 0;
+    
 }
-.card{
-    margin-bottom: 20px;
-    width: 15rem;
+.sales .card{
+    width: 14.2rem;
+    border: 1px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px var(--shadow-dark);
+    position: relative;
+}
+.card .card-img-top{
+    height:200px;
 }
 .card-footer .fa{
     color: #007f6d;
@@ -94,18 +145,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
  .fa-star-half{
     color:#f57c00;
  } 
+ .category-box{
+     display: flex;
+     flex-wrap :wrap;
+     justify-content: center;
+     align-items: center;
+     
+ }
 
  .catagerory-button{
-        background-color: #008774; 
+        width: 10rem;
+        background-color: var(--primary-color); 
         border: none;
         color: white;
-        padding: 10px 20px;
+        padding: 10px;
         text-align: center;
-        display: inline-block;
         font-size: 16px;
-        margin: 4px 2px;
+        margin: 4px 20px;
         cursor: pointer;
-        border-radius: 8px;
+        border-radius: 25px;
         margin-bottom: 20px;
         margin-top: 20px;
 }
@@ -119,6 +177,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 }    
 .fa-circle-dot {
     transition: transform 0.3s ease;
+}
+.icon .row{
+    display: flex;
+    flex-wrap :wrap;
+    
 }
 
 .icon-item {
@@ -138,7 +201,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     font-weight: bold;
     margin-bottom: 15px;
 }
-
 
 
 
