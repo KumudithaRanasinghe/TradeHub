@@ -126,7 +126,7 @@
                         %>
 
                         <tr class="tr1 shadow-sm" name="identifier">
-                            <td class="td"><img src="<%= item.getProduct().getpPhoto()%>" alt="gameboy" width="60px" height="60px"><%= item.getProduct().getpName()%></td>
+                            <td class="td"><img src="images/products/<%= item.getProduct().getpPhoto()%>" alt="gameboy" width="90px" ><%= item.getProduct().getpName()%></td>
                             <td id = "itemPrice<%=dynamic%>" value="<%= item.getProduct().getpPrice()%>">Rs.<%= item.getProduct().getpPrice()%>.00</td>
                             <td><div class="box rounded shadow-sm">
                                     <input class="quantity" id="textInput<%=dynamic%>" value="<%= item.getQuantity()%>" type="number" onchange="changeText(<%=dynamic%>,<%= item.getProduct().getpPrice()%>)" min="1">
