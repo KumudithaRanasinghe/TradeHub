@@ -31,6 +31,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 a {
   text-decoration: none;
 }
+.nav-item .nav-link {
+    color: var(--primary-color-active);
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+.nav-item .nav-link.active{
+    color: var(--primary-color-dark);
+}
+.nav-item  .cart{
+    color: var(--primary-color);
+}
+.nav-item .cart i{
+    font-size: 27px;
+}
+.nav-item  .count{
+     background:var(--secondary-color); 
+     color:var(--primary-color-dark);
+     width: 18px;
+     height: 18px;
+     transform: translate(40px, 12px);
+}
 
 .main-wrapper {
   width: 100%;

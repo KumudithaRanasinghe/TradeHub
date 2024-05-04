@@ -30,26 +30,33 @@
 
                 <ul class="navbar-nav nav-dark justify-content-center flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link active mx-lg-3" aria-current="page" href="index.jsp" style="color:#008774;">Home</a>
+                        <a class="nav-link active mx-lg-3" aria-current="page" href="index.jsp" >Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  mx-lg-3" aria-current="page" href="category.jsp" style="color:#008774;">Categories</a>
+                        <a class="nav-link  mx-lg-3" aria-current="page" href="category.jsp" >Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-lg-3" aria-current="page" href="contact.jsp" style="color:#008774;">Contact</a>
+                        <a class="nav-link mx-lg-3" aria-current="page" href="contact.jsp" >Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-lg-3" aria-current="page" href="about.jsp" style="color:#008774;">About</a>
+                        <a class="nav-link mx-lg-3" aria-current="page" href="about.jsp" >About</a>
 
                     </li>
                 </ul> 
 
                 <div class="nav-item" >
-
-                    <a href="cart.jsp" style="color:#008774;"><i class="fa-solid fa-cart-shopping mx-lg-5">
+                    
+                    <a href="cart.jsp" class="cart btn pb-0  mx-2"  style="border:none;"><i class="fa-solid fa-cart-shopping "></i></a>
+                      
                             <%if (user1 != null) {
-                            %>( <%=count%> )<%;
-                                }%> </i></a>
+                            %>
+                            <div class=" top-0 position-absolute  rounded-circle d-flex justify-content-center align-items-center count">
+
+                                 <%=count%> 
+                            </div>
+                                <%
+                                }%> 
+                        
 
                     <%if (user1 == null) {
 
@@ -60,7 +67,7 @@
                         <button type="submit" class="btn btn-secondary mr-2">Sign Up</button>
                     </a>
                     <a  class="mx-1" href="login.jsp">
-                        <button type="submit" class=" btn-primary">Log In</button>
+                        <button type="submit" class="btn btn-primary">Log In</button>
                     </a>
                     <% } else {
                     %>
@@ -69,7 +76,7 @@
                         <%= user1.getUserName()%>
                     </a>
                     <a  class="mx-1" href="LogoutServlet">
-                        <button type="submit" class=" btn-primary">Log out</button>
+                        <button type="submit" class="btn btn-primary">Log out</button>
                     </a>
                     <%}
                     %> 
