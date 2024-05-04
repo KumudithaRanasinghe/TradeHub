@@ -90,7 +90,7 @@
             %>
             <div class="card  col-md-4 col-lg-12 border" >
           <a href="#" alt="">
-              <img src="images/products/<%=product.getpPhoto()%>" class="card-img-top">
+              <img src="images/products/<%=product.getpPhoto()%>" class="card-img-top  py-2">
           </a>
           <div class="card-body">
             <h5 class="card-title"><%=product.getpName()%></h5>
@@ -122,10 +122,60 @@
      
      
         </div>
-     
-
-      
     </div>
+        <div class="container px-5">
+          
+            <div class="tittle-box my-4">
+              <h4>This Months<a href="products.jsp?category=all"><button class="tittle-box-button">View All</button></a></h4>
+            <h1>Best Selling products</h1>
+            </div>
+            <div class="category-box">
+              <%
+                  for(Category c:clist)
+                  {
+              %>
+                  <a href="products.jsp?category=<%= c.getCategoryId() %>"><button class="catagerory-button"><%=c.getCategoryName()%></button></a>
+              <%   
+                          }
+              %>
+            </div>
+               <div class="sales row">
+        <%
+            for(Product product : products){
+            
+            %>
+            <div class="card  col-md-4 col-lg-12 border" >
+          <a href="#" alt="">
+              <img src="images/products/<%=product.getpPhoto()%>" class="card-img-top  py-2">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><%=product.getpName()%></h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Rs.<%=product.getpPrice()%>.00</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                 </div>
+            </li>
+            </ul>    
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div>
+            
+            <%
+            }
+        
+        %>
+        </div>
+            
+      </div>
             <div class="container px-5">
                 <div class="icon row">
                     <div class="col-md-4">
