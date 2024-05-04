@@ -21,16 +21,19 @@
         <%@include file="components/nav.jsp" %>
         <div class="main-wrapper" >
             <div class="container">
-            <% 
+            <%
+                String catId="all";
                    String cat = request.getParameter("category");
                    ProductDao pdao = new ProductDao(FactoryProvider.getFactory());
                    List<Product> plist =null;
                      if(cat==null || cat.trim().equals("all")){
                          plist = pdao.getAllProducts();
+                         catId="all";
 
                         }else{
                             int cid = Integer.parseInt(cat.trim());
                             plist= pdao.getAllProductsbyId(cid);
+                            catId= Integer.toString(cid);
 
                     }
                      %> 
@@ -61,7 +64,7 @@
                         </ul>    
                       <div class="card-footer">
                         <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                        <a href="cart.jsp?id=<%= p.getpId()%>" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a href="cart.jsp?id=<%= p.getpId()%>&category=<%=catId%>" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                       </div>
                     </div>
                 </div>

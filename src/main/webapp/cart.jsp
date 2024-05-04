@@ -46,28 +46,20 @@
                     for (Cart outcome : outcomes) {
                         cartDao.updateCart(outcome.getCartId(), outcome.getQuantity() + 1);
                     }
-                    if (isThereCat != null) {
+                   
         %><script type="text/javascript">
-                        window.location.href = "products.jsp?category=" + isThereCat;
+                        window.location.href = "products.jsp?category=<%=isThereCat%>";
         </script><%
-        } else {
-        %><script type="text/javascript">
-                window.location.href = "products.jsp";
-        </script><%
-            }
+        
 
         } else {
 
             cartDao.addItem(Integer.parseInt(product_id), logged_user.getUserId(), 1);
-            if (isThereCat != null) {
+            
         %><script type="text/javascript">
-                        window.location.href = "products.jsp?category=" + isThereCat;
+                        window.location.href = "products.jsp?category=<%=isThereCat%>";
         </script><%
-        } else {
-        %><script type="text/javascript">
-                window.location.href = "products.jsp";
-        </script><%
-                    }
+        
                 }
             }
 
