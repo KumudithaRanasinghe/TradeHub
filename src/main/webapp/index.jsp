@@ -24,8 +24,8 @@
       
       
       <!---------------- homepage-------------- -->
-      
-      <section class="header">
+      <div class="main-wrapper">
+      <section class="header container">
     <div class="side-menu">
         <% 
                  String cat = request.getParameter("category");
@@ -45,44 +45,45 @@
 
         </ul>
     </div> 
+    <div class="carousel-wrapper">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"> 
+          <div class="carousel-indicators ">
+            <button type="button"  data-bs-slide-to="0" class="indicator-btn" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button"  data-bs-slide-to="1" class="indicator-btn "  aria-label="Slide 2"></button>
+            <button type="button"  data-bs-slide-to="2" class="indicator-btn active" aria-label="Slide 3"></button>
+            <button type="button"  data-bs-slide-to="3" class="indicator-btn" aria-label="Slide 4"></button>
+            <button type="button"  data-bs-slide-to="4" class="indicator-btn" aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item ">
+              <img src="images/home/lifestyle.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item ">
+              <img src="images/home/lifestyle.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item active">
+              <img src="images/home/working.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="images/home/pets.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="images/home/pets.jpg" class="d-block w-100">
+            </div>
+          </div>
+
+        </div>
+     </div>
     </section>
-    <div id="carouselExampleIndicators" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="images/home/lifestyle.jpg" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="images/home/working.jpg" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="images/home/pets.jpg" class="d-block w-100">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  <div class="container">
-  <div class="tittle-box">
+  <div class="container px-5">
+
+  <div class="tittle-box my-4">
       <h4>Today's <a href="products.jsp?category=all"><button class="tittle-box-button">View All</button></a></h4>
   <h1>Flash sales</h1>
   </div>
-      
-
-<!--    <div class="container">-->
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col ">
-        <div class="card" >
+      <div class="sales row">
+        
+        <div class="card  col-md-4 col-lg-12 border" >
           <a href="#" alt="">
           <img src="images/home/bags.png" class="card-img-top">
           </a>
@@ -106,10 +107,10 @@
             <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           </div>
         </div>
-        </div>
+     
 
-        <div class="col">
-        <div class="card" style="width: 15rem;">
+       
+        <div class="card col-md-4 col-lg-12 border">
           <a href="#" alt="">
           <img src="images/home/coat.png" class="card-img-top">
           </a>
@@ -132,10 +133,10 @@
             <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           </div>
         </div> 
-        </div>
+     
         
-        <div class="col-md-4 mb-4">
-        <div class="card" style="width: 15rem;">
+        
+        <div class="card col-md-4 col-lg-12 border">
           <a href="#" alt="">
           <img src="images/home/comfort chair.png" class="card-img-top">
           </a>
@@ -160,10 +161,10 @@
             <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           </div>
         </div> 
-        </div>
+     
 
-        <div class="col-md-4 mb-4">
-        <div class="card" style="width: 15rem;">
+        
+        <div class="card col-md-4 col-lg-12 border">
           <a href="#" alt="">
           <img src="images/home/dog food.png" class="card-img-top">
           </a>
@@ -188,10 +189,10 @@
             <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           </div>
         </div> 
-        </div>
+     
 
-        <div class="col-md-4 mb-4">
-        <div class="card" style="width: 15rem;">
+        
+        <div class="card col-md-4 col-lg-12 border">
           <a href="#" alt="">
           <img src="images/home/watch.png" class="card-img-top">
           </a>
@@ -216,10 +217,10 @@
             <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           </div>
         </div>
-        </div>
+     
         
-        <div class="col-md-4 mb-4">
-        <div class="card" style="width: 15rem;">
+        
+        <div class="card col-md-4 col-lg-12 border">
           <a href="#" alt="">
           <img src="images/home/airpods.jpg" class="card-img-top">
           </a>
@@ -244,21 +245,121 @@
             <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           </div>
         </div>
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/airpods.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Airpods</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$300.65</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
         </div>
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/airpods.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Airpods</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$300.65</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/airpods.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Airpods</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$300.65</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/airpods.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Airpods</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$300.65</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div>
+     
         </div>
         
         </div>
-        </div>
-      </div>
-<!--    </div>-->
+       
+      
 
-    <div class="container">
-    <div class="tittle-box">
+
+    <div class="container px-5">
+    <div class="tittle-box my-4">
         <h4>This Months<a href="products.jsp?category=all"><button class="tittle-box-button">View All</button></a></h4>
       <h1>Best Selling products</h1>
       </div>
-      </div>
-      <div class="container">
+      
+        <div class="category-box">
         <%
             for(Category c:clist)
             {
@@ -267,15 +368,147 @@
         <%   
                     }
         %>
-      </div>
+        </div>
+        <div class="sales row">
+        
+        <div class="card  col-md-4 col-lg-12 border" >
+          <a href="#" alt="">
+          <img src="images/home/bags.png" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Lady's Handbag</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$250.35</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                 </div>
+            </li>
+            </ul>    
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div>
+     
 
+       
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/coat.png" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Winter coat</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$500.45</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div> 
+     
+        
+        
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/comfort chair.png" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Comfort chair</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$150.75</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div> 
+     
 
+        
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/dog food.png" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Breed Dog Food</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$50.40</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div> 
+     
 
-
-    <div class="container">
-      <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="card" style="width: 15rem;">
+        
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/watch.png" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Watches</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$180.75</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+                
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div>
+     
+        
+        
+        <div class="card col-md-4 col-lg-12 border">
           <a href="#" alt="">
           <img src="images/home/airpods.jpg" class="card-img-top">
           </a>
@@ -300,148 +533,114 @@
             <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           </div>
         </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card" style="width: 15rem;">
-            <a href="#" alt="">
-            <img src="images/home/airpods.jpg" class="card-img-top">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Airpods</h5>
-              
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">$300.65</li>
-              <li class="list-group-item">
-                <div class="product bottom">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  
-                  </div>
-              </li>
-            </ul>
-            <div class="card-footer">
-              <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
-              <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-            </div>
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/airpods.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Airpods</h5>
+            
           </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card" style="width: 15rem;">
-              <a href="#" alt="">
-              <img src="images/home/airpods.jpg" class="card-img-top">
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">Airpods</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$300.65</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
                 
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">$300.65</li>
-                <li class="list-group-item">
-                  <div class="product bottom">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    
-                    </div>
-                </li>
-              </ul>
-              <div class="card-footer">
-                <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-              </div>
-            </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card" style="width: 15rem;">
-                <a href="#" alt="">
-                <img src="images/home/airpods.jpg" class="card-img-top">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Airpods</h5>
-                  
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">$300.65</li>
-                  <li class="list-group-item">
-                    <div class="product bottom">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      
-                      </div>
-                  </li>
-                </ul>
-                <div class="card-footer">
-                  <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                  <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                </div>
-              </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card" style="width: 15rem;">
-                  <a href="#" alt="">
-                  <img src="images/home/airpods.jpg" class="card-img-top">
-                  </a>
-                  <div class="card-body">
-                    <h5 class="card-title">Airpods</h5>
-                    
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">$300.65</li>
-                    <li class="list-group-item">
-                      <div class="product bottom">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        
-                        </div>
-                    </li>
-                  </ul>
-                  <div class="card-footer">
-                    <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                    <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                  </div>
-                </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                  <div class="card" style="width: 15rem;">
-                    <a href="#" alt="">
-                    <img src="images/home/airpods.jpg" class="card-img-top">
-                    </a>
-                    <div class="card-body">
-                      <h5 class="card-title">Airpods</h5>
-                      
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">$300.65</li>
-                      <li class="list-group-item">
-                        <div class="product bottom">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          
-                          </div>
-                      </li>
-                    </ul>
-                    <div class="card-footer">
-                      <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                      <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                    </div>
-                  </div>
-                  </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           </div>
-          <div id="icons">
-            <div class="container">
-                <div class="row">
+        </div>
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/airpods.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Airpods</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$300.65</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/airpods.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Airpods</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$300.65</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="card col-md-4 col-lg-12 border">
+          <a href="#" alt="">
+          <img src="images/home/airpods.jpg" class="card-img-top">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Airpods</h5>
+            
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$300.65</li>
+            <li class="list-group-item">
+              <div class="product bottom">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+                </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          </div>
+        </div>
+     
+        </div>
+     
+
+      
+    </div>
+            <div class="container px-5">
+                <div class="icon row">
                     <div class="col-md-4">
                         <div class="icon-item text-center">
                             <i class="fa-solid fa-truck fa-3x"></i>
@@ -466,7 +665,7 @@
                 </div>
             </div>
         </div>
-</div>
+      
       
       
      <%@include file="components/footer.jsp" %> 
