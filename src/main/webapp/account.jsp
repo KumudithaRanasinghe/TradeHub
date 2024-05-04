@@ -140,7 +140,7 @@
                           </div>
                           <div class="form-group p-2">
                               <label for="pPic">Select picture</label>
-                              <input type="file"  id="pPic" class="form-control"  name="pPic" required/>
+                              <input type="file"  id="pPic" class="form-control"  name="pPic" accept="image/*" required/>
                               
                           </div>
                           <div class="container">

@@ -46,7 +46,7 @@
                 <div class="col">
                     <div class="card" >
                       <a href="#" alt="">
-                      <img src="/images/test/<%= p.getpPhoto()%>" class="card-img-top">
+                      <img src="images/products/<%= p.getpPhoto()%>" class="card-img-top">
                       </a>
                       <div class="card-body">
                         <h5 class="card-title"><%= p.getpName()%></h5>

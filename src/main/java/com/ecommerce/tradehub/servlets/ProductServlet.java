@@ -13,7 +13,11 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
@@ -29,15 +33,6 @@ import javax.servlet.http.Part;
 @MultipartConfig
 public class ProductServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -45,96 +40,79 @@ public class ProductServlet extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             String op = request.getParameter("operation");
             op.trim().equals("addproduct");
-            
+
             String pName = request.getParameter("pName");
             String pDesc = request.getParameter("pDesc");
             int pPrice = Integer.parseInt(request.getParameter("pPrice"));
             int pQuantity = Integer.parseInt(request.getParameter("pQuantity"));
             int catId = Integer.parseInt(request.getParameter("catId"));
             Part part = request.getPart("pPic");
-            
-            
+
             Product p = new Product();
             p.setpName(pName);
             p.setpDesc(pDesc);
             p.setpPrice(pPrice);
             p.setpQuantity(pQuantity);
             p.setpPhoto(part.getSubmittedFileName());
-            
-            
-            
+
             CategoryDao cdao = new CategoryDao(FactoryProvider.getFactory());
             Category category = cdao.getCategoryById(catId);
-            
+
             p.setCategory(category);
-            
-            
+
             ProductDao pdao = new ProductDao(FactoryProvider.getFactory());
             pdao.saveProduct(p);
-            
-            //pic upload
-            String path = request.getRealPath("images")+File.separator+"test"+File.separator+part.getSubmittedFileName();
-            System.out.println(path);
-            
-            try{
-            FileOutputStream fos = new FileOutputStream(path);
-            InputStream is = part.getInputStream();
-            
-            byte []data = new byte[is.available()];
-            is.read(data);
-            
-            fos.write(data);
-            fos.close();
+
+
+            String fileName = getFileName(part);
+            InputStream fileContent = part.getInputStream();
+
+            String uploadDir = getServletContext().getRealPath("") + File.separator + "/images/products";
+            File dir = new File(uploadDir);
+            if (!dir.exists()) {
+                dir.mkdirs();
             }
-            catch(Exception e)
-            {
-                e.printStackTrace();
+
+            OutputStream outputStream = new FileOutputStream(new File(uploadDir + File.separator + fileName));
+            int read = 0;
+            byte[] bytes = new byte[1024];
+
+            while ((read = fileContent.read(bytes)) != -1) {
+                outputStream.write(bytes, 0, read);
             }
-            
-            
-                        //out.println("product save success");
-            
-           HttpSession httpSession = request.getSession();
-           httpSession.setAttribute("message", "Product added successfully");
-           response.sendRedirect("account.jsp");            
-           return;
+            outputStream.flush();
+            outputStream.close();
+            fileContent.close();
+
+            HttpSession httpSession = request.getSession();
+            httpSession.setAttribute("message", "Product added successfully");
+            response.sendRedirect("account.jsp");      
+            return;
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    private String getFileName(Part part) {
+        for (String cd : part.getHeader("content-disposition").split(";")) {
+            if (cd.trim().startsWith("filename")) {
+                String fileName = cd.substring(cd.indexOf('=') + 1).trim().replace("\"", "");
+                return fileName.substring(fileName.lastIndexOf('/') + 1).substring(fileName.lastIndexOf('\\') + 1);
+            }
+        }
+        return null;
+    }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";
