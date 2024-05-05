@@ -123,6 +123,39 @@
      
         </div>
     </div>
+        
+        <div class="container px-5">
+             <div class="carousel-wrapper-mid my-3">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"> 
+                  <div class="carousel-indicators ">
+                    <button type="button"  data-bs-slide-to="0" class="indicator-btn" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button"  data-bs-slide-to="1" class="indicator-btn "  aria-label="Slide 2"></button>
+                    <button type="button"  data-bs-slide-to="2" class="indicator-btn active" aria-label="Slide 3"></button>
+                    <button type="button"  data-bs-slide-to="3" class="indicator-btn" aria-label="Slide 4"></button>
+                    <button type="button"  data-bs-slide-to="4" class="indicator-btn" aria-label="Slide 5"></button>
+                  </div>
+                  <div class="carousel-inner-mid">
+                    <div class="carousel-item ">
+                      <img src="images/home/lifestyle.jpg" class="d-block w-100 ">
+                    </div>
+                    <div class="carousel-item ">
+                      <img src="images/home/lifestyle.jpg" class="d-block w-100 ">
+                    </div>
+                    <div class="carousel-item active">
+                      <img src="images/home/working.jpg" class="d-block w-100 ">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/home/pets.jpg" class="d-block w-100 ">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/home/pets.jpg" class="d-block w-100 ">
+                    </div>
+                  </div>
+
+                </div>
+             </div>
+            
+        </div>
         <div class="container px-5">
           
             <div class="tittle-box my-4">

@@ -8,6 +8,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 */
 
                       /*home css*/
+                      
+
 .header{
     display: flex;                      
  }                     
@@ -55,12 +57,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 .carousel-wrapper .carousel-inner{
     width: 850px;
     margin-left: 10px;
+    border-radius: 8px;
 }
 
 .carousel-inner .carousel-item img{
     height: 300px;
     border-radius: 8px;
 }
+.carousel-wrapper-mid .carousel-inner-mid{
+    width: auto;
+    border-radius: 8px;
+    margin-right: 10px;
+    height: 400px;
+}
+.carousel-inner-mid .carousel-item img{
+    height: 400px;
+    border-radius: 8px;
+}
+
 
 .carousel-indicators{
     list-style: none;
