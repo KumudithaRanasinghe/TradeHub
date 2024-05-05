@@ -109,7 +109,7 @@
             </ul>    
           <div class="card-footer">
             <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
-            <a href="#" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <a href="cart.jsp?id=<%= product.getpId()%>&category=all&page=index" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           </div>
         </div>
             

@@ -51,6 +51,7 @@ public class ProductDao {
      {
        Session s = this.factory.openSession();
        Query query = s.createQuery("from Product order by rand()");
+       query.setMaxResults(10);
        List<Product> list = query.list();
        return list;
      }

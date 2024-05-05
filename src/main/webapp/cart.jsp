@@ -38,6 +38,7 @@
 
             String product_id = request.getParameter("id");
             String isThereCat = request.getParameter("category");
+            String pageName = request.getParameter("page");
             if (product_id != null) {
 
                 if (cartDao.isItemExists(Integer.parseInt(product_id), logged_user.getUserId()) > 0) {
@@ -48,7 +49,7 @@
                     }
                    
         %><script type="text/javascript">
-                        window.location.href = "products.jsp?category=<%=isThereCat%>";
+                        window.location.href = "<%=pageName%>.jsp?category=<%=isThereCat%>";
         </script><%
         
 
@@ -57,7 +58,7 @@
             cartDao.addItem(Integer.parseInt(product_id), logged_user.getUserId(), 1);
             
         %><script type="text/javascript">
-                        window.location.href = "products.jsp?category=<%=isThereCat%>";
+                        window.location.href = "<%=pageName%>.jsp?category=<%=isThereCat%>";
         </script><%
         
                 }
@@ -126,7 +127,7 @@
                         %>
 
                         <tr class="tr1 shadow-sm" name="identifier">
-                            <td class="td"><img src="images/products/<%= item.getProduct().getpPhoto()%>" alt="gameboy" width="90px" ><%= item.getProduct().getpName()%></td>
+                            <td class="td"><img src="images/products/<%= item.getProduct().getpPhoto()%>" alt="item-image" width="90px" ><%= item.getProduct().getpName()%></td>
                             <td id = "itemPrice<%=dynamic%>" value="<%= item.getProduct().getpPrice()%>">Rs.<%= item.getProduct().getpPrice()%>.00</td>
                             <td><div class="box rounded shadow-sm">
                                     <input class="quantity" id="textInput<%=dynamic%>" value="<%= item.getQuantity()%>" type="number" onchange="changeText(<%=dynamic%>,<%= item.getProduct().getpPrice()%>)" min="1">
