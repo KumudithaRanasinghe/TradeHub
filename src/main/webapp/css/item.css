@@ -1,220 +1,139 @@
-body {
-  font-family: Arial;
-  margin: 0;
-  padding: 0;
-}
-.quantity-selector input {
-  width: 30px; /* Adjust width as needed */
-  padding: 5px; /* Adjust padding as needed */
-}
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
 
-.add-to-cart .quantity-selector.inline {
-  display: inline-flex; /* Makes elements behave like inline elements but allows width/height */
+h6{
+    color:#00A991
 }
-
-.add-to-cart .quantity-selector.inline label {
-  margin-right: 5px; /* Adjust spacing as needed */
+span{
+    color: #9f9f9f;
 }
-
-.add-to-cart .quantity-selector.inline input,
-.add-to-cart .quantity-selector.inline button {
-  /* Adjust width, height, and margin as needed to create a visually single line */
-  width: 30px;
-  height: 30px;
-  margin: 0;
+.rating{
+    color:#FFAD33;
+    
 }
-.transparent-button {
-  background-color: transparent;
-  border: none; /* Remove border for a cleaner look */
-  color: inherit; /* Inherit color from parent element */
-  cursor: pointer; /* Indicate clickable behavior */
+.col-lg-6 {
+    padding-left: 10%;
 }
-
-header {
-  background-color: #f1f1f1;
-  padding: 10px 0;
-}
-
-.logo {
-  float: left;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-nav {
-  float: right;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-}
-
-main {
-  padding: 40px 0;
-}
-
-.product-image {
-  float: left;
-  width: 40%;
-}
-
-.product-image img {
-  width: 100%;
-}
-
-.product-info {
-  float: right;
-  width: 60%;
-
-}
-
-.product-info h2 {
-  margin-top: 0;
-  font-size: 24px;
-}
-
-.product-info p.rating {
-  margin-bottom: 10px;
-}
-
-
-.wrapper{
-  height: 60px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-
-  background: #FFF;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-.wrapper span{
-  width: 60%;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  user-select: none;
-}
-.wrapper span.num{
-  font-size: 20px;
-  border-right: 1px solid rgba(0,0,0,0.2);
-  border-left: 1px solid rgba(0,0,0,0.2);
-  pointer-events: none;
-}
-.plus {
-  background-color: green; /* Set background color to green */
-  color: white; /* Set text color to white (optional) */
-  padding: 5px; /* Add some padding (optional) */
-   border-radius: 12px;
-}
-
+.discount{
+    position: absolute;
+    background-color: #DB4444;
+    color: #fff;
+    border-radius: 2px;
+    margin-top: 10px;
+} 
 .product-container {
-  display: flex; /* Make elements behave like flexbox items */
-  align-items: center; /* Align items vertically within the container */
-}
+    display: flex; 
+    align-items: center; 
+    padding-top: 80px;
+  }
 
-.quantity-selector, .add-to-cart {
-  /* Adjust width, margin, and padding as needed for desired layout */
-  width: auto;
-  margin: 0 10px; /* Add some horizontal margin between elements */
-}
-
-.product-info p.rating .fa-star.checked {
-  color: gold;
-}
-
-.product-info .price {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-
-}
-
-.product-info .description {
-  margin-bottom: 20px;
-}
-
-.add-to-cart {
-  text-align: center;
-}
-
-.add-to-cart button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.related-items {
-  clear: both; /* Clear the float from product-image and product-info */
-  margin-top: 40px;
-}
-
-.related-items h3 {
-  margin-bottom: 20px;
-}
-
-.related-items .item {
-  float: left;
-  width: 32%;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-
-.checked {
-  color: orange;
-}
-.delivery-info {
-  border: 1px solid #ccc; /* Change the color as desired */
-  padding: 10px; /* Add padding for spacing between border and content */
-  margin: 10px; /* Add margin for spacing around the border */
-}
-.related-items .item a {
-  text-decoration: none;
-  color: #333;
-}
-
-.related-items .item img {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.related-items .item p {
-  margin: 5px 0;
-}
-
-.related-items .item .price {
-  color: #007bff;
+.quantity-selector input {
+    width: 30px;
+    padding: 5px; 
+  }
   
+  .add-to-cart .quantity-selector.inline {
+    display: inline-flex; 
+  }
+  
+  .add-to-cart .quantity-selector.inline label {
+    margin-right: 5px; 
+  }
+  
+  .add-to-cart .quantity-selector.inline input,
+  .add-to-cart .quantity-selector.inline button {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+  }
+  .transparent-button {
+    background-color: transparent;
+    border: none; 
+    color: inherit;
+    cursor: pointer; 
+  }
+  
+  .plus, .minus {
+    background-color: #00A991;
+    color: white;
+    padding: 5px; 
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .quantity-selector, .add-to-cart {
+    width: auto;
+    margin: 0 10px; 
+    text-align: center;
+      
+  }
+  .add-to-cart button {
+    background-color: #cd0920;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delivery-info {
+    border: 1px solid #9f9f9f; 
+    padding: 10px; 
+    margin: 10px; 
+    align-items: center;
+  }
+  
+  .tittle-box{
+    color: #00A991;
+  }
+  .product .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-left: 0;
+    
 }
+.product .card{
+    width: 15rem;
+    border: 1px;
+    margin: 10px 30px 10px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px var(--shadow-dark);
+    position: relative;
+}
+.card .card-img-top{
+    height:200px;
+}
+.card-footer .fa{
+    color: #007f6d;
+    padding: 7px;
+}
+.card-tittle .h5{
+    font-weight: 400;
+}
+.tittle-box-button{
+        background-color: #b0e4dd; 
+        border: none;
+        color: #004c41;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+}
+.tittle-box-button{
+    float:right;
+}
+.tittle-box-button:hover{
+    background-color: #009883;
+}
+ .fa-star,
+ .fa-star-half{
+    color:#f57c00;
+ } 
 
-.related-items .item .original-price {
-  text-decoration: line-through;
-  color: #ccc;
-  margin-left: 5px;
-}
 
-.related-items .item .rating {
-  margin-top: 10px;
-}
+
+
