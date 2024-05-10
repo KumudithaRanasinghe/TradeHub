@@ -4,6 +4,10 @@
     Author     : Minul
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="com.ecommerce.tradehub.entities.Product"%>
+<%@page import="com.ecommerce.tradehub.dao.ProductDao"%>
+<%@page import="com.ecommerce.tradehub.helper.FactoryProvider"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,171 +15,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Havic HV G-92 Gamepad</title>
+  <%@include file="components/common.jsp" %>
   <link rel="stylesheet" href="css/item.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<%
+    String productId = request.getParameter("id");
+    String categoryId = request.getParameter("category");
+    
+    ProductDao pdao = new ProductDao(FactoryProvider.getFactory());
+    Product product = pdao.getProductById(Integer.parseInt(productId));
+    List<Product> relatedProducts = pdao.getRelatedProductbyId(Integer.parseInt(categoryId), Integer.parseInt(productId));
+    int cid = Integer.parseInt(categoryId.trim());
+    String catId = Integer.toString(cid);
+    
+%>
+
 <body>
- <table>
-    <thead>
-      <tr>
-        <th><img src="Havic_HV_G-92_Gamepad 1.jpg" alt="Havic HV G-92 Gamepad"> <br><br>
-		<img src="Havic_HV_G-92_Gamepad 2.jpg" alt="Havic HV G-92 Gamepad"><br><br>
-		<img src="Havic_HV_G-92_Gamepad 3.jpg" alt="Havic HV G-92 Gamepad"><br>
-		<img src="Havic_HV_G-92_Gamepad 4.jpg" alt="Havic HV G-92 Gamepad">
-		</th>
-        <th><div class="container">
-      <div class="product">
-        <div class="product-image">
-         <img src="Havic_HV_G-92_Gamepad.jpg" alt="Havic HV G-92 Gamepad" style="width: 350%; height: auto;">
+    <%@include file="components/nav.jsp" %>
+    <div class="main-wrapper" >
+    <div class="container">
+        <secion class="container-sproduct my-5 pt-5">
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-12 col-12 border">
+                    <img class="img-fluid w-100" src="images/products/<%= product.getpPhoto() %>">
+                </div>
+                <div class="col-lg-6 col-md-12 col-12">
+                    <h2><%= product.getpName() %></h2>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <span>(150 Reviews) |   In-Stock </span>
+                    <h5> $<%= product.getpPrice() %></h5>
+                    <br>
+                    <p><%= product.getpDesc() %></p>
+                    <div class="product-container">
+                         <div class="quantity-selector">
+                            <span class="minus">-</span>
+                            <span class="num">01</span>
+                            <span class="plus">+</span>
+                        </div>
+                         <div class="add-to-cart">
+                            <button type="submit">Add to Cart</button>
+                                <button type="button" style="background-color: transparent; color: black; border: 1px solid black; class="add-to-favorites">
+                                    <i class="fa-regular fa-heart"></i> 
+                        </div>
+                    </div>
+                    <div class="delivery-info">
+                        <h2>  <i class="fa fa-truck"></i> Free Delivery</h2>
+                        <p>Enter your postal code for Delivery Availability</p>
+                        <br>
+                        <h2><i class="fa-solid fa-rotate"></i> Return Delivery</h2>
+                        <p>
+                          <span class="delivery-icon">
+                          
+                          </span>
+                          Free 30 Days Delivery Returns. <a href="#">Details</a>
+                        </p>
+                    </div>
+          
+                </div>
+            </div>
+        </secion>
+        
+        <div class="tittle-box my-4">
+         <h4>Related Items</h4>
+        </div>
+         <div class="product row my-5">
+                <%
+                                for(Product p:relatedProducts){
 
+                   %>
+                   <div class="card  col-md-4 col-lg-12 border" >
+                            <a href="item.jsp?id=<%= p.getpId()%>&category=<%=catId%>">
+                                <img src="images/products/<%= p.getpPhoto()%>" class="card-img-top py-2">
+                                </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><%= p.getpName()%></h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">$ <%=p.getpPrice() %></li>
+                              <li class="list-group-item">
+                                <div class="product bottom">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                   </div>
+                              </li>
+                              </ul>    
+                            <div class="card-footer">
+                              <a href="#" class="card-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                              <a href="cart.jsp?id=<%= p.getpId()%>&category=<%=catId%>&page=products" class="card-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                            </div>
+                         </div>
 
-
-        </div></th>
-        <th>
-        <div class="product-info">
-          <h2>Havic HV G-92 Gamepad</h2>
-          <div class="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="rating-value"></span>
-            <a href="#" class="rating-link">150 Reviews | INSTOCK </a> 
-          </div>
-          <p class="price" style="color:green" >$192.00</p>
-          <div class="description">
-            <p style="font-family: Times New Roman ;">PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p>
-<hr>
-          </div>
-<div class="product-container"> <div class="quantity-selector">
-    <span class="minus">-</span>
-    <span class="num">01</span>
-    <span class="plus">+</span>
-  </div>
-  <div class="add-to-cart">
-    <button type="submit" style="background-color: red; color: white;">Buy Now</button>
-    <button type="button" style="background-color: transparent; color: black; border: 1px solid black; class="add-to-favorites">
-      <i class="fa-regular fa-heart"></i> 
-    </button>
-  </div>
-</div>
-
+                
+                        <%} 
+                            %>
+                           
+              </div> 
+    </div>
+    </div>
+   <%@include file="components/footer.jsp" %>
+</body>
+</html> 
 <script>
-  const plus = document.querySelector(".plus"),
-        minus = document.querySelector(".minus"),
-        num = document.querySelector(".num");
-  let a = 1;
-
-  plus.addEventListener("click", () => {
-    a++;
-    a = (a < 10) ? "0" + a : a;
-    num.innerText = a;
-  });
-
-  minus.addEventListener("click", () => {
-    if (a > 1) {
-      a--;
+    const plus = document.querySelector(".plus"),
+          minus = document.querySelector(".minus"),
+          num = document.querySelector(".num");
+    let a = 1;
+  
+    plus.addEventListener("click", () => {
+      a++;
       a = (a < 10) ? "0" + a : a;
       num.innerText = a;
-    }
-  });
-</script>
-
-			  
-            </form>
-            <div class="delivery-info">
-              <h2>  <i class="fa fa-truck"></i>Free Delivery</h2>
-              <p>Enter your postal code for Delivery Availability</p>
-			  <hr>
-              <h2><i class="fa-solid fa-rotate"></i> Return Delivery</h2>
-              <p>
-                <span class="delivery-icon">
-                
-                </span>
-                Free 30 Days Delivery Returns. <a href="#">Details</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-</th>
-     
- 
-</main>
-
+    });
   
- 
-  <table> <div class="related-items" style="color: #27AE60; width: 300px; height: 150px;">
-  <h3>&#x25A0; Related Items</h3>
-</div>
-
-
-    <tr>
-      <td class="item">
-        <a href="#">
-          <img src="gamepad.jpg" alt="Related Item 1" style="width: 40%; height: auto;"> </a>
-        <p>HAVIT HV-G62 Gamepad</p>
-        		<p class="price" style="color: green;">$120.00 <span class="original-price" style="color: gray;"> <s>$160.00</s></span></p>
-        <div class="rating">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          (88 Reviews)
-        </div>
-      </td>
-      <td class="item">
-        <a href="#">
-          <img src="key.jpg" alt="Related Item 2" style="width: 40%; height: auto;"> </a>
-        <p>AK-900 Wired Keyboard</p>
-  		<p class="price" style="color: green;">$960.00 <span class="original-price"style="color: gray;" > <s>$1160.00</s></span></p>
-
-
-        <div class="rating">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          (75 Reviews)
-        </div>
-      </td>
-      <td class="item">
-        <a href="#">
-          <img src="moni.jpg" alt="Related Item 3" style="width: 40%; height: auto;"> </a>
-        <p>lPS LCD Gaming Monitor</p>
-        		<p class="price" style="color: green;">$370.00 <span class="original-price" style="color: gray;"><s> $400.00</s></span></p>
-        <div class="rating">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          (99 Reviews)
-        </div>
-      </td>
-      <td class="item">
-        <a href="#">
-          <img src="cool.jpg" alt="Related Item 4" style="width: 40%; height: auto;"> </a>
-        <p>RGB Liquid cpu Cooler</p>
-      		<p class="price" style="color: green;">$160.00 <span class="original-price"style="color: gray;"><s> $170.00</s></span></p>
-        <div class="rating">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star half"></span>
-          (88 Reviews)
-        </div>
-      </td>
-    </tr>
-  </table>
-</tr>
-</thead>
-</table>
-</body>
-</html>
-
-    
+    minus.addEventListener("click", () => {
+      if (a > 1) {
+        a--;
+        a = (a < 10) ? "0" + a : a;
+        num.innerText = a;
+      }
+    });
+  </script>
