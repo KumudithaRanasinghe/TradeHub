@@ -14,7 +14,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Havic HV G-92 Gamepad</title>
+  <title>Item</title>
   <%@include file="components/common.jsp" %>
   <link rel="stylesheet" href="css/item.css">
 </head>
@@ -33,13 +33,13 @@
 <body>
     <%@include file="components/nav.jsp" %>
     <div class="main-wrapper" >
-    <div class="container">
-        <secion class="container-sproduct my-5 pt-5">
-            <div class="row mt-5">
-                <div class="col-lg-5 col-md-12 col-12 border">
-                    <img class="img-fluid w-100" src="images/products/<%= product.getpPhoto() %>">
+    <div class="container px-5">
+        <section class="item">
+            <div class="row mt-5 ">
+                <div class="main-image col-lg-5 border">
+                    <img  src="images/products/<%= product.getpPhoto() %>">
                 </div>
-                <div class="col-lg-6 col-md-12 col-12">
+                <div class="content col-lg-6 col-md-12 col-12">
                     <h2><%= product.getpName() %></h2>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -59,9 +59,9 @@
                             <span class="plus">+</span>
                         </div>
                          <div class="add-to-cart">
-                            <button type="submit">Add to Cart</button>
-                                <button type="button" style="background-color: transparent; color: black; border: 1px solid black; class="add-to-favorites">
-                                    <i class="fa-regular fa-heart"></i> 
+                             <a href="cart.jsp?id=<%= product.getpId()%>&category=<%=catId%>&page=products"><button type="submit">Add to Cart</button></a>
+                            <button type="button" style="background-color: transparent; color: black; border: 1px solid black;" class="add-to-favorites">
+                                    <i class="fa-regular fa-heart"></i> </button>
                         </div>
                     </div>
                     <div class="delivery-info">
@@ -79,7 +79,7 @@
           
                 </div>
             </div>
-        </secion>
+        </section>
         
         <div class="tittle-box my-4">
          <h4>Related Items</h4>

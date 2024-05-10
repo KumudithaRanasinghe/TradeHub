@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>products</title>
         <%@include file="components/common.jsp" %>
         <link rel="stylesheet" href="css/product.css"/>
     </head>
@@ -43,7 +43,7 @@
 
                    %>
                      <div class="card  col-md-4 col-lg-12 border" >
-                            <a href="#" alt="">
+                            <a href="item.jsp?id=<%= p.getpId()%>&category=<%=catId%>">
                                 <img src="images/products/<%= p.getpPhoto()%>" class="card-img-top py-2">
                             </a>
                             <div class="card-body">

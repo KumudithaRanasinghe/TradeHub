@@ -9,8 +9,14 @@ span{
     color:#FFAD33;
     
 }
-.col-lg-6 {
-    padding-left: 10%;
+.item .content {
+  margin-left: 100px;
+  
+ 
+ .item .main-image{
+    margin-left: 100px;  
+ } 
+  
 }
 .discount{
     position: absolute;
