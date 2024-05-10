@@ -16,7 +16,9 @@
     <body>
         <%@include file="components/nav.jsp" %>
         <div class="main-wrapper">
+            <div class="container px-5">
             <div class="col-md-8 form-container">
+                
                 <div class="contactInfo">
                     <div class="box">
                         <div class="icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
@@ -40,6 +42,8 @@
                         <p>Emails: support@tradehub.com</p>
                     </div>
                 </div>
+               
+                
                 <div class="form-box">
                     <form action="#">
                         <div class="row g-3">
@@ -62,6 +66,8 @@
                     </form>
                 </div>
             </div>
+          
+        </div>
         </div>
         <%@include file="components/footer.jsp" %>
     </body>

@@ -19,7 +19,9 @@
     </head>
     <body>
         <%@include file="components/nav.jsp" %>
-        <div class="main-wrapper">  
+        
+        <div class="main-wrapper"> 
+            <div class="container">
             <% 
                  String cat = request.getParameter("category");
                  CategoryDao cdao = new CategoryDao(FactoryProvider.getFactory());
@@ -148,6 +150,7 @@
           </div>  
         </div>
     </div>
+       </div>
    <%@include file="components/footer.jsp" %>
     </body>
 </html>

@@ -16,7 +16,8 @@
     <body>
         <%@include file="components/nav.jsp" %>
         <div class="main-wrapper">
-        <div class="container" id="myContainer">
+        <div class="container c-box">
+        <div class="myContainer">
         <div class="card">
             <div class="card-header">
                 <form class="row g-4">
@@ -52,7 +53,7 @@
                     </div>   
             </div> 
             </div>
-           <div class="container" id="shpContainer">
+           <div class="shpContainer">
              <h4 class="nameh4">Shopping Card</h4>
              <h5 class="name5">Payment Methods</h5>
               
@@ -94,7 +95,7 @@
            
               </div>
     </div>     
-    </div>
+    
         
       <%@include file="components/footer.jsp" %>  
     </body>

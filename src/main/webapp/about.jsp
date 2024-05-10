@@ -19,7 +19,7 @@
 <%@include file="components/nav.jsp" %>
 <div class="main-wrapper">
 <div id="about">
-    <div class="container">
+    <div class="container px-5">
         <div class="row">           
             <div class="col-lg-6 about-col-2">
                 <h1 class="sub-title">Our Story</h1>
@@ -33,8 +33,8 @@
     </div>
 </div>
 <!--------------------services------------------------------------->
-<div id="services">
-    <div class="container">
+ <div class="container px-5">
+    <div id="services">
         <div class="row">
             <div class="col-md-6 col-lg-3">
                 <div class="service-item text-center">
@@ -68,7 +68,7 @@
     </div>
 </div>
 <!-------------------------------------Developers------------------------------------------------------>
-
+<div class="container">
 <div id="Developers" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -266,6 +266,7 @@
     <div class="carousel-indicators" class="Rasil-indicators">
         <!-- Indicators will be generated dynamically based on the number of items in carousel-inner -->
     </div>
+</div>
 </div>
 
 
