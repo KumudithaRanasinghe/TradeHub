@@ -69,7 +69,8 @@
 </div>
 <!-------------------------------------Developers------------------------------------------------------>
 <div class="container">
-<div id="Developers" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="row">
@@ -79,7 +80,7 @@
                  <div class="card-dev">
                     <div class="column-dev">
                         <div class="center">
-                            <img src="https://media.licdn.com/dms/image/D5603AQHF8YhuaywLcg/profile-displayphoto-shrink_800_800/0/1701538334391?e=1719446400&v=beta&t=wBnxqhpFyNDlyWGMA-eoBERgtUiBDps_qukDur8fFhI" width="350px" height="auto" class="curve">
+                            <img src="https://media.licdn.com/dms/image/D5603AQHF8YhuaywLcg/profile-displayphoto-shrink_800_800/0/1701538334391?e=1719446400&v=beta&t=wBnxqhpFyNDlyWGMA-eoBERgtUiBDps_qukDur8fFhI" width="350" height="auto" class="curve">
                         </div>  
                         <div>
                             <h3><p><b>Dushan Madushanka</b></p></h3>
@@ -109,7 +110,7 @@
                 <div class="card-dev">
                     <div class="column-dev">
                         <div class="center">
-                            <img src="https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/396141705_342734548415897_5715569810515635735_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeETGzquw7s7eACf3U3qrij8xGxxTa1SB07EbHFNrVIHTunADF468WBfmy7bWCl5wEf9MQbxqrS-RaMC3Uiu7wlb&_nc_ohc=_m6h4KCIg58Ab6Cb24s&_nc_ht=scontent.fcmb1-2.fna&oh=00_AfDIEnRiDl71v-OaBTxgSNhzzXfb3Ux_3UCtj-jve98JZw&oe=662D6EAF" width="350px" height="auto" class="curve">
+                            <img src="https://media.licdn.com/dms/image/D5603AQEyiX98CboROg/profile-displayphoto-shrink_800_800/0/1673636606276?e=1720656000&v=beta&t=zzEO7iGc8P5iCLlnUSwdaLeAXgw2UFfnmO40F_vpfpg" width="350px" height="auto" class="curve">
                         </div>  
                         <div>
                             <h3><p><b>Radhishan Senanayaka</b></p></h3>
@@ -130,7 +131,7 @@
                 <div class="card-dev">
                     <div class="column-dev">
                         <div class="center">
-                            <img src="https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/407557105_888109166026864_3342715434302211311_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE7OdXeFaHJ6ow3qvpjnvR8QlJagu2NOQtCUlqC7Y05C9AYXJUPcL7Zp0Y8lB8xuR-KLn8jwKYtsOs0PAGRS3vy&_nc_ohc=c7OKriOEzB0Ab4fJUg-&_nc_ht=scontent.fcmb1-2.fna&oh=00_AfB8Lwrnc7si9OAp6pBe007D2WcO4xeZyf6qaCfsjVKzsg&oe=662D77BB" width="350px" height="auto" class="curve">
+                            <img src="https://media.licdn.com/dms/image/D4E03AQHnstPYJ7XBmw/profile-displayphoto-shrink_800_800/0/1667008084904?e=1720656000&v=beta&t=uKdfFBdhSq3DE1TJ2wCd8AuDxlpulHXrifncSRVlRl0" width="350px" height="auto" class="curve">
                         </div>  
                         <div>
                             <h3><p><b>Rasil laksika</b></p></h3>
@@ -254,17 +255,13 @@
         </div>
         <!-- Repeat the above structure for each carousel item -->
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#Developers" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#Developers" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 
-    <div class="carousel-indicators" class="Rasil-indicators">
-        <!-- Indicators will be generated dynamically based on the number of items in carousel-inner -->
+    <div class="carousel-indicators Rasil-indicators ">
+        <button type="button"  data-bs-slide-to="0" class="indicator-btn active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button"  data-bs-slide-to="1" class="indicator-btn "  aria-label="Slide 2"></button>
+        <button type="button"  data-bs-slide-to="2" class="indicator-btn" aria-label="Slide 3"></button>
+        <button type="button"  data-bs-slide-to="3" class="indicator-btn" aria-label="Slide 4"></button>
+           
     </div>
 </div>
 </div>
@@ -308,19 +305,4 @@
      
     </body>
 </html>
-<script>
-    var carouselIndicators = document.querySelector('.carousel-indicators');
-    var carouselInner = document.querySelector('.carousel-inner');
 
-    // Generate indicators for each carousel item
-    for (var i = 0; i < carouselInner.children.length; i++) {
-        var indicator = document.createElement('button');
-        indicator.type = 'button';
-        indicator.setAttribute('data-bs-target', '#Developers');
-        indicator.setAttribute('data-bs-slide-to', i.toString());
-        if (i === 0) {
-            indicator.classList.add('active');
-        }
-        carouselIndicators.appendChild(indicator);
-    }
-</script>

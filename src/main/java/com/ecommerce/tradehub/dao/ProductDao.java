@@ -64,5 +64,21 @@ public class ProductDao {
        List<Product> list = query.list();
        return list;
      }
+     public Product getProductById(int pId){
+       Session s = this.factory.openSession();
+       Query query = s.createQuery("from Product where pId = :id");
+       query.setParameter("id", pId);
+       Product product = (Product) query.uniqueResult();
+       return product;
+     }
+     public List<Product> getRelatedProductbyId(int cid, int excludepId) {
+       Session s = this.factory.openSession();
+       Query query = s.createQuery("from Product where category.categoryId = :categoryId and pId != :excludeProductId");
+       query.setParameter("categoryId", cid);
+       query.setParameter("excludeProductId", excludepId);
+       query.setMaxResults(4);
+       List<Product> relatedProducts = query.list();
+       return relatedProducts;
+     }
     
 }

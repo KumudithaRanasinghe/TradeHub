@@ -28,11 +28,14 @@
       <section class="header container">
     <div class="side-menu">
         <% 
-                 String cat = request.getParameter("category");
+                 
                  CategoryDao cdao = new CategoryDao(FactoryProvider.getFactory());
                  ProductDao productDao = new ProductDao(FactoryProvider.getFactory());
                  List<Category> clist = cdao.getCategories();
                  List<Product> products = productDao.getAllProducts();
+//                 String categoryId = request.getParameter("category");
+//                 int cid = Integer.parseInt(categoryId.trim());
+//                 String catId = Integer.toString(cid);
 
             %>
         <ul>
@@ -89,7 +92,7 @@
             
             %>
             <div class="card  col-md-4 col-lg-12 border" >
-          <a href="#" alt="">
+          <a href="">
               <img src="images/products/<%=product.getpPhoto()%>" class="card-img-top  py-2">
           </a>
           <div class="card-body">
@@ -178,7 +181,7 @@
             
             %>
             <div class="card  col-md-4 col-lg-12 border" >
-          <a href="#" alt="">
+          <a href="">
               <img src="images/products/<%=product.getpPhoto()%>" class="card-img-top  py-2">
           </a>
           <div class="card-body">

@@ -73,8 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 
 .card-dev{
     background-color: white;
-   /* rgba(255, 255, 255, 0.459);*/
-    width: 350px;
+    width: 355px;
     height: 470px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
     border-radius: 10px;
@@ -113,25 +112,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     .card-dev .column-dev a {
         margin-right: 10px; 
     }
+    .card-dev p {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-dev p i{
+        font-size: 30px;
+        color: var(--primary-color); 
+    }
+    .card-dev p i:hover{
+        color: var(--primary-color-active); 
+    }
 
 
-/* Hide the previous and next buttons */
-.carousel-control-prev,
-.carousel-control-next {
-    display: none;
-}
 
 /* Style the carousel indicators */
 .Rasil-indicators {
     display: flex;
     justify-content: center;
-    margin-top: 10px; /* Adjust the margin as needed */
+    bottom:-10px;
 }
 
 .Rasil-indicators button {
+    border: 1px;
+    border-color: black;
     width: 20px;
     height: 20px;
-    background-color: green;
+    background-color:var(--secondary-color);
     border: none;
     border-radius: 50%;
     margin: 0 5px;
@@ -140,7 +149,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 }
 
 .Rasil-indicators button.active {
-    background-color: blue;
+    background-color: var(--primary-color-active);
 }
 
 
