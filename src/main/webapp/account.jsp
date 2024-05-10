@@ -37,7 +37,8 @@
 <body>
     <%@include file="components/nav.jsp" %>
     <div class="main-wrapper">
-        <div class="col-md-6 form-container">
+        <div class="container">
+        <div class="col-md-4 form-container">
             <dl>
                 <dt>Manage My account</dt>
                     <dd><a href="account.jsp">My Profile</a></dd>
@@ -85,7 +86,8 @@
                     </div>
                 </form>
             </div>
-        </div> 
+        </div>
+      </div>
     </div>
      <!-- Modal -->
             <div class="modal fade" id="add-product-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

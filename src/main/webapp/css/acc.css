@@ -1,17 +1,17 @@
 
 .form-container{
-   padding-top: 100px;
+   padding-top: 10px;
    margin: 6%;
 }
 .form-box{
-   width: 600px;
+   width:auto;
    height: 800px;
    position: absolute;
    top: 50%;
-   left: 55%;
    margin: 6% auto;
+   right:  10%;
    padding: 40px;
-   transform: translate(-50%, -50%);
+   transform: translate(-20%, -50%);
    box-sizing: border-box;  
  }
  a{

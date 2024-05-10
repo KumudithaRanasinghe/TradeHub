@@ -6,26 +6,28 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : Apr 30, 2024, 12:53:19 AM
     Author     : DELL
 */
-#myContainer{
+.c-box{
+    display: flex;
+}
+ .c-box .myContainer{
+    display: flex;
     top:16%;
     width: 700px; 
     margin: 0 auto; 
     padding: 50px; 
     position: absolute;
-    margin-left: 100px;
-    left: 0;
     height:400px 
 }
 
-#shpContainer {
+.c-box .shpContainer {
     width: 400px; 
     height: 550px; 
     position: absolute;
     top: 14%;
-    right: 140px;
     padding: 20px;
     background-color: whitesmoke;
     border-radius:20px;
+    right: 10%;
 }
 h5.nameh5{
     margin-bottom: 10px;

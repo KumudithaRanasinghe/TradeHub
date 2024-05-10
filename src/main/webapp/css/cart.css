@@ -9,8 +9,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 .table1{
     margin-top: 120px;
 }
-.container .cart-box{
+.cart-box .container-fluid{
     margin-bottom: 2rem;
+    padding-left: 3rem;
+
 }
 
 .tr0{
@@ -33,6 +35,10 @@ td.pr{
     width:300px;
 }
 
+.tr1 td{
+    padding: 3px;
+}
+
 .box{
     border:1px solid black ;
     width:60px;
@@ -47,7 +53,6 @@ td.pr{
   border-radius: 0.4rem;
   color: var(--text-light-color);
   background-color: #DB4444;
-  border-color: var(--primary-color);
   transition: all 0.3s ease-in-out;
 }
 .btn-delete:hover{
